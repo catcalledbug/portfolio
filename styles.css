@@ -3,21 +3,16 @@
     src: url('assets/fonts/Cairo\ Unicode/Cairo.ttf');
 }
 
-/* @font-face {
-    font-family: 'PPEditorialNew-Italic';
-    src: url(assets/fonts/editorial-new-font-family/PPEditorialNew-Italic-BF644b214fb0c0a.otf);
-} */
-
 @font-face {
     font-family: 'PPEditorialNew-Regular';
     src: url(assets/fonts/editorial-new-font-family/PPEditorialNew-Regular-BF644b214ff145f.otf);
 }
 
-
 @font-face {
     font-family: 'PPEditorialNew-UltraLight';
     src: url(assets/fonts/editorial-new-font-family/PPEditorialNew-Ultralight-BF644b21500d0c0.otf);
 }
+
 @font-face {
     font-family: 'PPEditorialNew-UltraLightItalic';
     src: url(assets/fonts/editorial-new-font-family/PPEditorialNew-UltralightItalic-BF644b214ff1e9b.otf);
@@ -32,11 +27,6 @@
     font-family: 'NeueMontreal-Italic';
     src: url(/assets/fonts/neue-montreal-v2-0-font-family/ppneuemontreal-italic.otf);
 }
-
-/* @font-face {
-    font-family: 'NeueMontreal-Light';
-    src: url(assets/fonts/neue-montreal-v2-0-font-family/ppneuemontreal-thin.otf);
-} */
 
 @font-face {
     font-family: 'NeueMontreal-Book';
@@ -222,7 +212,6 @@ li {
 }
 
 #about {
-    /* margin-top: 30%; */
     min-height: unset;
 }
 
@@ -316,7 +305,6 @@ p {
     background-color: var(--white);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    /* margin-top: 60px; */
 }
 
 #intro img {
@@ -397,25 +385,21 @@ details {
     scroll-margin-top: 50px;
 }
 
-/* animate summary/details dropdown */
 summary {
     transition: all 0.5s ease;
     padding: 0.5em 1em;
     font-weight: 700;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5em;
+    width: 100%;
 }
 
 [open] summary {
     padding: 1em 1em;
     padding-right: 2em;
     font-size: calc(105%);
-}
-
-summary {
-    color: #333;
-    cursor: pointer;
-    display: flex;
-    gap: 0.5em;
-    width: 100%;
 }
 
 summary::after {
@@ -474,7 +458,6 @@ h3.role-header span {
     padding: 0 1em;
 }
 
-/* animation for nav buttons */
 .animation-box {
     background-color: var(--selection-red) !important;
     color: black;
@@ -526,7 +509,6 @@ figure > img {
     display: flex;
     flex-direction: column;
     min-height: 70vh;
-    /* align-items: center; */
 }
 
 #contact .stem {
@@ -683,12 +665,6 @@ p.animation-text {
         width: 35vw;
         background-color: var(--selection-red) !important;
     }
-/* todo */
-   
-
-    /* .work-section {
-        background-color: transparent !important;
-    } */
 
     #about-grid {
         display: grid;
@@ -880,9 +856,6 @@ p.animation-text {
         margin-top: -5.5rem;
     }
 
-    /* #projects .project-img {
-        max-width: 60%;
-    } */
     img#crest {
         width: 40%;
     }
