@@ -581,7 +581,7 @@ figure > img {
 }
 
 #to-top-container a {
-    color: var(--selection-red);
+    color: var(--dark-gray);
     font-size: 1.7rem;
     scroll-behavior: smooth;
     display: flex;
@@ -591,7 +591,7 @@ figure > img {
 
 #to-top-container a > p {
     font-size: .9rem;
-    color: var(--red);
+    color: var(--dark-gray);
     margin: 0;
 }
 
