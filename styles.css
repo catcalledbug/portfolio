@@ -768,6 +768,10 @@ p.animation-text {
         justify-content: flex-start;
     }
 
+    #about .project-img {
+        margin-top: -20%;
+    }
+
     details {
         color: transparent;
         cursor: url(/assets/imgs/custom.png), auto;
@@ -818,7 +822,7 @@ p.animation-text {
         border-radius: 25px;
         padding: 1.5em;
         cursor: url(/assets/imgs/custom.png), auto;
-        height: 50vh;
+        height: fit-content;
         width: 100%;
     }
 
@@ -860,7 +864,8 @@ p.animation-text {
     }
 
     img#crest {
-        width: 50%;
+        width: 40%;
+        padding: 50px 0px;
     }
     .project-img {
         width: 450px;
@@ -898,7 +903,7 @@ p.animation-text {
     }
 
     .list-item {
-        width: 12vw;
+        width: 10vw;
     }
 
     .stem {
@@ -923,7 +928,7 @@ p.animation-text {
 
     .work-section {
         justify-self: center;
-        height: 65vh;
+        height: fit-content;
         align-items: center;
         display: flex;
         width: 100%;
@@ -962,7 +967,7 @@ p.animation-text {
     }
 
     #contact .nav-item, #contact .nav-item:hover .animation-box {
-        height: 17vh;
+        height: 20vh;
         color: white !important;
     }
 
@@ -985,9 +990,13 @@ p.animation-text {
         height: 22vh;
     }
 
-    .nav-item, .nav-item:hover .animation-box, #contact .nav-item:hover .animation-box, #contact .nav-item, .animation-box {
-        max-width: 230px !important;
-        width: 230px;
+    .nav-item, .nav-item:hover .animation-box {
+        max-width: 200px !important;
+        width: 200px;
+    }
+
+    #contact .nav-item:hover .animation-box, #contact .nav-item, .animation-box {
+        max-width: 230px;
     }
 
     .work-section, #contact-list-container {
