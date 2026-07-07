@@ -994,6 +994,9 @@ p.animation-text {
 	.work-section.uw-section {
 		height: 40vh;
 	}
+    #about section {
+        display: grid;
+    }
 }
 
 @media (min-width: 1900px) {
@@ -1037,9 +1040,6 @@ p.animation-text {
 	#about .project-img {
 		margin-top: -8px;
 	}
-    #about section {
-        display: grid;
-    }
 }
 
 @media (min-width: 2440px) {
