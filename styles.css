@@ -1037,6 +1037,9 @@ p.animation-text {
 	#about .project-img {
 		margin-top: -8px;
 	}
+    #about section {
+        display: grid;
+    }
 }
 
 @media (min-width: 2440px) {
