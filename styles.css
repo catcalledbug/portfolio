@@ -488,8 +488,12 @@ h3.role-header span {
 }
 
 .project-img {
-    max-width: 80%;
+    max-width: 50%;
     margin-top: 15px;
+}
+
+.work-section .project-img {
+    max-width: 75%;
 }
 
 figure > img {
@@ -626,7 +630,12 @@ p.animation-text {
 
 @media (min-width: 815px) { 
     .nav-list {
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    nav {
+        min-height: 50vh;
     }
 
     #contact .animation-text, #contact .list-item p {
@@ -637,12 +646,8 @@ p.animation-text {
         font-size: 3rem !important;
     }
 
-    .nav-item {
-        height: 25vh;
-    }
-
-    .nav-item:hover .animation-box {
-        height: 25vh;
+    .nav-item, .nav-item:hover .animation-box, #contact .nav-item, #contact .nav-item:hover .animation-box {
+        height: 20vh;
     }
 
     .stem {
@@ -715,8 +720,8 @@ p.animation-text {
     }
 
     #intro img {
-        height: 200px;  
-        width: unset;
+        height: 300px;
+        width: 300px;
     }
 
     .project-img {
@@ -741,7 +746,6 @@ p.animation-text {
 
     .bullet-list {
         font-size: 1rem;
-        /* width: 90%; */
     }
 
     .bullet-list > li {
@@ -799,8 +803,9 @@ p.animation-text {
     .figure-container {
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 50%;
         align-self: center;
+        height: 100%;
     }
 
     figure.lg {
@@ -813,6 +818,8 @@ p.animation-text {
         border-radius: 25px;
         padding: 1.5em;
         cursor: url(/assets/imgs/custom.png), auto;
+        height: 50vh;
+        width: 100%;
     }
 
     .sm {
@@ -840,10 +847,6 @@ p.animation-text {
         font-size: 3rem;
     }
 
-    .nav-list {
-        justify-content: center;
-    }
-
     .exp-container {
         display: flex;
         flex-direction: column;
@@ -857,7 +860,7 @@ p.animation-text {
     }
 
     img#crest {
-        width: 40%;
+        width: 50%;
     }
     .project-img {
         width: 450px;
@@ -900,11 +903,6 @@ p.animation-text {
 
     .stem {
         width: 15%;
-    }
-
-    #intro img {
-        height: 250px;
-        width: 250px;
     }
 
     #intro p {
@@ -951,6 +949,7 @@ p.animation-text {
 
     .bullet-list {
         width: 85%;
+        font-size: 1.2rem;
     }
 
     #contact .header-name {
@@ -963,16 +962,173 @@ p.animation-text {
     }
 
     #contact .nav-item, #contact .nav-item:hover .animation-box {
-        height: 25vh;
+        height: 17vh;
         color: white !important;
     }
 
     #contact .list-item:nth-child(even) .stem {
         height: calc(20vh + 50px);
     }
+
+    #projects .project-img.lg {
+        margin-top: 0;
+    }
+
+    .work-section .project-img {
+        max-width: 100%;
+    }
+
 }
 
-@media (min-width: 1490px) {
+@media (min-width: 1500px) {
+    #contact .nav-item, #contact .nav-item:hover .animation-box {
+        height: 22vh;
+    }
 
+    .nav-item, .nav-item:hover .animation-box, #contact .nav-item:hover .animation-box, #contact .nav-item, .animation-box {
+        max-width: 230px !important;
+        width: 230px;
+    }
+
+    .work-section, #contact-list-container {
+        width: 80%;
+        height: fit-content;
+    }
+
+    .header-title.center-title {
+        max-width: 35%;
+        margin-left: 10%;
+    }
+
+    h2.header-name {
+        font-size: 4rem;
+    }
+
+    #intro {
+        width: 50vw;
+    }
+
+    #intro div h2 {
+        font-size: 4rem;
+    }
+
+    #intro img {
+        height: 350px;
+        width: 350px;
+    }
+
+    #intro p {
+        padding: 0 50px;
+        font-size: 1.5rem;
+    }
+
+    #about-grid {
+        height: 100vh;
+        width: calc(80% - 6.5rem);
+        justify-self: center;
+    }
+
+    img#crest {
+        width: 160px;
+        margin-top: -14%;
+    }
+
+    .work-section.uw-section {
+        height: 35vh;
+    }
 }
 
+@media (min-width: 1900px) {
+    .header-title.center-title {
+        max-width: 30%;
+    }
+
+    .list-item {
+        width: 10vw;
+    }
+
+    #intro p {
+        padding: 50px 80px;
+    }
+
+    .bullet-list {
+        font-size: 1.3rem;
+    }
+
+    img#crest {
+        margin-top: -12%;
+    }
+
+    #projects .project-img.lg {
+        max-width: 35%;
+    }
+}
+
+@media (min-width: 2140px) {
+    .header-title.center-title {
+        max-width: 25%;
+    }
+
+    .project-img {
+        width: 600px;
+    }
+    #about-grid .header-title {
+        padding: 0 70px;
+    }
+   
+
+    img#crest {
+        margin-top: -8%;
+    }
+
+    #contact .stem {
+        width: 10%;
+    }
+}
+
+@media (min-width: 2440px) {
+   .details-container {
+        gap: 0;
+   }
+
+   #about-grid .header-title {
+        padding: 0 80px;
+    }
+
+    #projects .project-img.lg {
+        max-width: 30%;
+    }
+
+    nav {
+        align-items: center;
+    }
+
+    h2.header-name {
+        font-size: 6rem;
+    }
+
+    .xl-text {
+        font-size: 10rem;
+    }
+
+    .nav-list {
+        gap: 0;
+    }
+    
+    .nav-item, .nav-item:hover .animation-box, #contact .nav-item:hover .animation-box, #contact .nav-item, .animation-box { 
+        max-width: 240px !important;
+        width: 240px;
+    }
+
+    .stem {
+        width: 10%;
+    }
+
+    .list-item {
+        width: 8vw;
+    }
+
+
+
+   
+}
