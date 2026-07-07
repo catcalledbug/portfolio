@@ -991,8 +991,8 @@ p.animation-text {
     }
 
     .nav-item, .nav-item:hover .animation-box {
-        max-width: 200px !important;
-        width: 200px;
+        max-width: 240px !important;
+        width: 240px;
     }
 
     #contact .nav-item:hover .animation-box, #contact .nav-item, .animation-box {
@@ -1043,7 +1043,7 @@ p.animation-text {
     }
 
     .work-section.uw-section {
-        height: 35vh;
+        height: 40vh;
     }
 }
 
@@ -1084,15 +1084,20 @@ p.animation-text {
     #about-grid .header-title {
         padding: 0 70px;
     }
-   
 
     img#crest {
-        margin-top: -8%;
+        margin-top: -12% !important;
+        width: 230px !important;
     }
 
     #contact .stem {
         width: 10%;
     }
+
+    #about .project-img {
+        margin-top: -8px;
+    }
+
 }
 
 @media (min-width: 2440px) {
