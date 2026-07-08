@@ -607,11 +607,6 @@ figure>img {
 	padding-top: 50px;
 }
 
-#intro img:hover {
-	background-image: url(/assets/imgs/headshot-ascii.png);
-	mix-blend-mode: multiply;
-}
-
 #contact-list-container {
 	width: 100%;
 	display: flex;
@@ -648,39 +643,54 @@ p.animation-text {
 		justify-content: center;
 		gap: 30px;
 	}
+
 	nav {
 		min-height: 50vh;
 	}
+
+    #intro img:hover {
+        background-image: url(/assets/imgs/headshot-ascii.png);
+        mix-blend-mode: multiply;
+    }
+
 	#contact .animation-text,
 	#contact .list-item p {
 		font-size: 2rem !important;
 	}
+
 	.animation-text,
 	.list-item p {
 		font-size: 3rem !important;
 	}
+
 	.nav-item,
 	.nav-item:hover .animation-box,
 	#contact .nav-item,
 	#contact .nav-item:hover .animation-box {
 		height: 20vh;
 	}
+
 	.stem {
 		height: 20vh;
 	}
+
 	.list-item:nth-child(even) .stem {
 		height: calc(20vh + 50px);
 	}
+
 	.tulips {
 		padding: 10% 0;
 	}
+
 	#contact .nav-item {
 		width: 35vw;
 	}
+
 	#contact .animation-box {
 		width: 35vw;
 		background-color: var(--selection-red) !important;
 	}
+
 	#about-grid {
 		display: grid;
 		grid-template-columns: 4fr 2fr;
@@ -690,18 +700,22 @@ p.animation-text {
 		height: 90vh;
 		padding-top: 100px;
 	}
+
 	#about-grid .header-title {
 		grid-row: 2;
 		padding: 0;
 		order: 2;
 	}
+
 	#about {
 		scroll-margin-top: -25px;
 	}
+
 	#projects,
 	#contact {
 		scroll-margin-top: -75px;
 	}
+
 	#intro {
 		border-radius: 25px;
 		grid-row: 1 / 4;
@@ -709,52 +723,64 @@ p.animation-text {
 		padding: 2.5em;
 		order: 1;
 	}
+
 	#intro p {
 		padding-top: 40px;
 		font-size: 1.2em;
 	}
+
 	#intro div {
 		height: 50%;
 		display: flex;
 		align-items: center;
 	}
+
 	#intro div h2 {
 		font-size: 3rem;
 		text-align: center;
 	}
+
 	#intro img {
 		height: 300px;
 		width: 300px;
 	}
+
 	.project-img {
 		margin: 0;
 		padding: 0;
 		max-width: 100%;
 	}
+
 	figure {
 		border-bottom-left-radius: 25px;
 		background-color: transparent;
 		padding: 0;
 	}
+
 	::details-content {
 		content-visibility: visible;
 	}
+
 	summary::after {
 		display: none;
 	}
+
 	.bullet-list {
 		font-size: 1rem;
 	}
+
 	.bullet-list>li {
 		padding: 0;
 		line-height: 1.5;
 	}
+
 	.info-container {
 		display: flex;
 		flex-direction: column;
 		width: 50%;
 		align-items: flex-start;
 	}
+
 	.details-container {
 		display: flex;
 		flex-direction: row;
@@ -762,34 +788,43 @@ p.animation-text {
 		gap: 3em;
 		justify-content: flex-start;
 	}
+
 	#about .project-img {
 		margin-top: -20%;
 	}
+
 	details {
 		color: transparent;
 		cursor: url(/assets/imgs/custom.png), auto;
 		width: 100%;
 		height: 100%;
 	}
+
 	.lg-text {
 		font-size: 2rem;
 	}
+
 	.header-title {
 		width: 75%;
 	}
+
 	.header-title.center-title {
 		max-width: 40%;
 		align-self: flex-start;
 	}
+    
 	.role-header {
 		width: 100%;
 	}
+
 	.lg {
 		display: block;
 	}
+
 	summary {
 		cursor: url(/assets/imgs/custom.png), auto;
 	}
+
 	.figure-container {
 		display: flex;
 		flex-direction: column;
@@ -797,11 +832,13 @@ p.animation-text {
 		align-self: center;
 		height: 100%;
 	}
+
 	figure.lg {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
 	.work-section {
 		border-radius: 25px;
 		padding: 1.5em;
@@ -809,54 +846,68 @@ p.animation-text {
 		height: fit-content;
 		width: 100%;
 	}
+
 	.sm {
 		display: none;
 	}
+
 	body {
 		cursor: url(/assets/imgs/custom.png), auto;
 		padding: 25px;
 	}
+
 	.uw-section {
 		height: 50vh;
 	}
+
 	#contact a,
 	.nav-item,
 	.nav-item:hover .animation-box,
 	.animation-box {
 		max-width: 200px;
 	}
+
 	.list-item {
 		width: 20vw;
 	}
+
 	h2.header-name {
 		font-size: 3rem;
 	}
+
 	.exp-container {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		width: 100%;
 	}
+
 	#projects .project-img.lg {
 		max-width: 50%;
 		margin-top: -5.5rem;
 	}
+
 	img#crest {
 		width: 40%;
 		padding: 50px 0px;
 	}
+
 	.project-img {
 		width: 450px;
 	}
+
 	#contact .exp-container section {
 		width: 100%;
 	}
+
 	#contact h3 {
 		padding: 1.5em;
 	}
+
 	#contact .work-section {
 		height: fit-content;
 	}
+
 	.header-title span {
 		font-size: 4rem;
 	}
