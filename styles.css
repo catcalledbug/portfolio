@@ -648,10 +648,10 @@ p.animation-text {
 		min-height: 50vh;
 	}
 
-    #intro img:hover {
+    /* #intro img:hover {
         background-image: url(/assets/imgs/headshot-ascii.png);
         mix-blend-mode: multiply;
-    }
+    } */
 
 	#contact .animation-text,
 	#contact .list-item p {
