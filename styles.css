@@ -419,7 +419,6 @@ summary {
 
 [open] summary {
 	padding: 1em 1em;
-	padding-right: 2em;
 	font-size: calc(105%);
 }
 
@@ -791,6 +790,8 @@ p.animation-text {
 		border-bottom-left-radius: 25px;
 		background-color: transparent;
 		padding: 0;
+        height: 100%;
+        width: 100%;
 	}
 
 	::details-content {
@@ -813,20 +814,14 @@ p.animation-text {
 	.info-container {
 		display: flex;
 		flex-direction: column;
-		width: 50%;
+		width: 100%;
 		align-items: flex-start;
 	}
 
 	.details-container {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-		gap: 3em;
-		justify-content: flex-start;
-	}
-
-	#about .project-img {
-		margin-top: -20%;
+        width: 50%;
+        float: left;
+        padding-top: 100px;
 	}
 
 	details {
@@ -834,6 +829,7 @@ p.animation-text {
 		cursor: url(/assets/imgs/custom.png), auto;
 		width: 100%;
 		height: 100%;
+        float: right;
 	}
 
 	.lg-text {
@@ -859,20 +855,21 @@ p.animation-text {
 
 	summary {
 		cursor: url(/assets/imgs/custom.png), auto;
+        position: absolute;
 	}
 
 	.figure-container {
 		display: flex;
 		flex-direction: column;
 		width: 50%;
-		align-self: center;
-		height: 100%;
+        padding: 100px 0;
 	}
 
 	figure.lg {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+        height: 100%;
 	}
 
 	.work-section {
@@ -920,12 +917,10 @@ p.animation-text {
 
 	#projects .project-img.lg {
 		max-width: 50%;
-		margin-top: -5.5rem;
 	}
 
 	img#crest {
-		width: 40%;
-		padding: 50px 0px;
+        max-width: 200px;
 	}
 
 	.project-img {
@@ -1074,7 +1069,6 @@ p.animation-text {
 	}
 
 	#projects .project-img.lg {
-		margin-top: 0;
 	}
 
 	.work-section .project-img {
@@ -1137,12 +1131,7 @@ p.animation-text {
 	}
 
 	img#crest {
-		width: 160px;
-		margin-top: -14%;
-	}
-
-	.work-section.uw-section {
-		height: 40vh;
+		width: 200px;
 	}
 
     #about section {
@@ -1165,10 +1154,6 @@ p.animation-text {
 
 	.bullet-list {
 		font-size: 1.3rem;
-	}
-
-	img#crest {
-		margin-top: -12%;
 	}
 
 	#projects .project-img.lg {
@@ -1195,16 +1180,11 @@ p.animation-text {
 	}
 
 	img#crest {
-		margin-top: -12% !important;
-		width: 230px !important;
+		width: 200px !important;
 	}
 
 	#contact .stem {
 		width: 10%;
-	}
-
-	#about .project-img {
-		margin-top: -8px;
 	}
 
 }
@@ -1212,7 +1192,7 @@ p.animation-text {
 @media (min-width: 2440px) {
 	.details-container {
 		gap: 0;
-	}
+	} 
 
 	#about-grid .header-title {
 		padding: 0 80px;
