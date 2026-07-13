@@ -1084,7 +1084,7 @@ p.animation-text {
 
 	.work-section,
 	#contact-list-container {
-		width: 80%;
+		width: 75%;
 		height: fit-content;
 	}
 
@@ -1099,7 +1099,7 @@ p.animation-text {
 
 	.header-title.center-title {
 		max-width: 35%;
-		margin-left: 10%;
+		margin-left: 11.5vw;
 	}
 
 	h2.header-name {
