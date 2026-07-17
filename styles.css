@@ -332,11 +332,11 @@ p {
 	float: left;
 	outline: 5px solid var(--red);
 	outline-offset: -5px;
-	background-image: url(/assets/imgs/headshot.JPG);
+	/* background-image: url(/assets/imgs/headshot.JPG); */
 	height: 50%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	/* background-size: cover; */
+	/* background-repeat: no-repeat; */
+	/* background-position: center; */
 }
 
 #intro>div {
