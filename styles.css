@@ -827,7 +827,6 @@ p.animation-text {
 		color: transparent;
 		cursor: url(/assets/imgs/custom.png), auto;
 		width: 100%;
-        display: flex;
         float: right;
 	}
 
