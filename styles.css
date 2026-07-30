@@ -93,6 +93,7 @@ h3 {
 	color: var(--dark-gray);
 	padding-top: 100px;
 	padding-bottom: 30px;
+    text-align: center;
 }
 
 .header-title>span {
@@ -166,6 +167,10 @@ a {
 
 li {
 	list-style: none;
+}
+
+#iplan-gif {
+    border-radius: 25px;
 }
 
 .nav-item,
@@ -656,11 +661,55 @@ p.animation-text {
 	font-size: 2.5rem !important;
 }
 
-@media (min-width: 815px) {
+@media (min-width: 1000px) {
 	.nav-list {
 		justify-content: center;
 		gap: 30px;
 	}
+
+    .work-section .project-img {
+        max-width: 50%;
+    }
+
+    .img-container.lg {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #stem-lab > .project-img {
+        /* border: 1px solid black; */
+        max-width: 90%;
+        border-radius: 10px;
+    }
+
+    #iplan-img,  #iplan-gif {
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    .stack>span {
+		margin: 0;
+        padding: 0;
+		border: none;
+		font-size: 2rem;
+	}
+    .stack {
+        padding: 0;
+    }
+
+    article.text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #contact-list-container, .work-section {
+        max-width: 95%;
+    }
 
     #experience {
         scroll-margin-top: 250px;
@@ -783,8 +832,12 @@ p.animation-text {
 	.project-img {
 		margin: 0;
 		padding: 0;
-		max-width: 100%;
+		width: 350px;
 	}
+
+    #crest {
+        width: 160px;
+    }
 
 	figure {
 		border-bottom-left-radius: 25px;
@@ -804,10 +857,11 @@ p.animation-text {
 
 	.bullet-list {
 		font-size: 1rem;
+        width: 100%;
 	}
 
 	.bullet-list>li {
-		line-height: 1.5;
+		line-height: 1.3;
 	}
 
 	.info-container {
@@ -820,14 +874,22 @@ p.animation-text {
 	.details-container {
         width: 50%;
         float: left;
+        background-color: var(--white);
+        padding: 0;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding-top: 100px;
+        height: 100%;
 	}
 
 	details {
 		color: transparent;
 		cursor: url(/assets/imgs/custom.png), auto;
-		width: 100%;
-        float: right;
+		/* width: 100%; */
+        width: 95vw;
 	}
 
 	.lg-text {
@@ -835,12 +897,11 @@ p.animation-text {
 	}
 
 	.header-title {
-		width: 75%;
+		width: 100%;
 	}
 
 	.header-title.center-title {
-		max-width: 40%;
-		align-self: flex-start;
+        justify-self: center;
 	}
     
 	.role-header {
@@ -853,15 +914,19 @@ p.animation-text {
 
 	summary {
 		cursor: url(/assets/imgs/custom.png), auto;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+        width: 50%;
+        padding-bottom: 0;
         position: absolute;
+        padding: 0;
 	}
 
 	.figure-container {
 		display: flex;
 		flex-direction: column;
-		width: 50%;
-        padding: 100px 0;
         height: 100%;
+        width: 40%;
 	}
 
 	figure.lg {
@@ -869,14 +934,15 @@ p.animation-text {
 		justify-content: center;
 		align-items: center;
         height: 100%;
+        margin-top: -90px;
 	}
 
 	.work-section {
 		border-radius: 25px;
 		padding: 1.5em;
 		cursor: url(/assets/imgs/custom.png), auto;
-		height: fit-content;
-		width: 100%;
+        align-self: center;
+        margin-bottom: 100px;
 	}
 
 	.sm {
@@ -910,16 +976,17 @@ p.animation-text {
 		width: 100%;
 	}
 
-	#projects .project-img.lg {
-		max-width: 50%;
-	}
+    .contact-text {
+        font-size: 1.5rem;
+    }
 
 	img#crest {
-        max-width: 200px;
+        max-width: 160px;
 	}
 
 	.project-img {
-		width: 450px;
+        margin-top: 0;
+        max-width: 100px;
 	}
 
 	#contact .exp-container section {
@@ -1013,37 +1080,6 @@ p.animation-text {
 		font-size: 5rem;
 	}
 
-	.work-section {
-		justify-self: center;
-		height: fit-content;
-		align-items: center;
-		display: flex;
-		width: 100%;
-	}
-
-	.stack>span {
-		margin: 0;
-		padding: 0;
-		border: none;
-		font-size: 2rem;
-	}
-
-	.exp-container {
-		padding: 0 4em;
-		width: 100%;
-		align-items: center;
-		gap: 5rem;
-	}
-
-	.exp-container h2 {
-		margin-bottom: -5rem;
-	}
-
-	.bullet-list {
-		width: 85%;
-		font-size: 1.2rem;
-	}
-
 	#contact .header-name {
 		font-size: 2rem;
 	}
@@ -1063,23 +1099,24 @@ p.animation-text {
 		height: calc(20vh + 50px);
 	}
 
-	#projects .project-img.lg {
-	}
-
-	.work-section .project-img {
-		max-width: 100%;
-	}
 }
 
 @media (min-width: 1500px) {
-	#contact .nav-item,
+    #contact-list-container, .work-section {
+        max-width: 85%;
+    }
+
+    .work-section .project-img {
+        max-width: 30%;
+    }
+
+    #contact .nav-item,
 	#contact .nav-item:hover .animation-box {
 		height: 22vh;
 	}
 
 	.work-section,
 	#contact-list-container {
-		width: 75%;
 		height: fit-content;
 	}
 
@@ -1091,11 +1128,6 @@ p.animation-text {
     #contact .nav-item {
         max-height: 150px;
     }
-
-	.header-title.center-title {
-		max-width: 35%;
-		margin-left: 11.5vw;
-	}
 
 	h2.header-name {
 		font-size: 4rem;
@@ -1125,19 +1157,18 @@ p.animation-text {
 		justify-self: center;
 	}
 
-	img#crest {
-		width: 200px;
-	}
-
     #about section {
         display: grid;
     }
 }
 
 @media (min-width: 1900px) {
-	.header-title.center-title {
-		max-width: 30%;
-	}
+    .work-section .project-img {
+        max-width: 30%;
+    }
+    #contact-list-container, .work-section {
+        max-width: 65%;
+    }
 
 	.list-item {
 		width: 10vw;
@@ -1147,28 +1178,16 @@ p.animation-text {
 		padding: 50px 80px;
 	}
 
-	.bullet-list {
-		font-size: 1.3rem;
-	}
-
-	#projects .project-img.lg {
-		max-width: 35%;
-	}
-
     .list-item a {
         width: 95%;
+    }
+    .details-container {
+        width: 30%;
     }
 
 }
 
 @media (min-width: 2140px) {
-	.header-title.center-title {
-		max-width: 25%;
-	}
-
-	.project-img {
-		width: 600px;
-	}
 
 	#about-grid .header-title {
 		padding: 0 70px;
@@ -1185,16 +1204,9 @@ p.animation-text {
 }
 
 @media (min-width: 2440px) {
-	.details-container {
-		gap: 0;
-	} 
 
 	#about-grid .header-title {
 		padding: 0 80px;
-	}
-
-	#projects .project-img.lg {
-		max-width: 30%;
 	}
 
 	nav {

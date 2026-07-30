@@ -94,9 +94,12 @@
         <article id="about">
             <section>
                 <div id="about-grid">
-                    <h2 class="header-title">
+                    <!-- <h2 class="header-title">
                         <span class="underlined">About<i aria-label="a flower icon" class="icon blue">Y</i></span>
                         <span class="underlined text-right">Me</span>
+                    </h2> -->
+                    <h2 class="header-title center-title">
+                        <span>About<i aria-label="a flower icon" class="icon blue">Y</i>Me</span>
                     </h2>
                     <div id="intro">
                         <div>
@@ -108,16 +111,19 @@
                         <p>
                             I am a front-end web developer with a passion for and hands-on experience in building responsive web applications with a focus on <span>accessibility, performance, and cross-browser compatibility.</span>                              
                             <br><br>
-                            I'm currently looking into any exciting opportunities that align with my skills. 
+                            <!-- I'm currently looking into any exciting opportunities that align with my skills. 
                             As a fast learner with a sharp attention to the details, 
-                            I am <span>ready to grow professionally</span> in a development team.
+                            I am <span>ready to grow professionally</span> in a development team. -->
                         </p>
                     </div>
                 </div>
                 <div class="exp-container">
-                    <h2 class="header-title center-title">
+                    <!-- <h2 class="header-title center-title">
                         <span class="underlined">Work<i class="icon blue">Z</i></span>
                         <span class="underlined text-right">Experience</span>
+                    </h2> -->
+                    <h2 class="header-title center-title">
+                        <span>Work<i class="icon blue">Z</i>Experience</span>
                     </h2>
                     <div class="work-section" id="experience">
                         <details name="accordion">
@@ -132,11 +138,11 @@
                                 <div class="details-container">
                                     <div class="info-container">
                                         <ul class="bullet-list">
-                                            <li>collaborated with UI/UX designer and lead developers remotely and in office on cross-platform web application
-                                                <a target="_blank" href="https://www.i-plan.us/">iPlan</a> using Angular, Ionic, and SCSS, translating Adobe XD designs into responsive, pixel-accurate user interfaces
+                                            <li>translated Adobe XD mockups into pixel-accurate user interfaces for 
+                                                <a target="_blank" href="https://www.i-plan.us/">iPlan</a> cross-platform web application using Angular, Ionic, and SCSS
                                             </li>
-                                            <li>isolated, identified, and resolved front-end bugs utilizing browser DevTools</li>
-                                            <li>built responsive layouts utilizing CSS media queries and breakpoints to ensure uniform cross-browser and cross-platform compatibility</li>
+                                            <li>identified, isolated, and resolved front-end bugs using browser Developer Tools</li>
+                                            <li>built responsive layouts using CSS media queries to ensure uniform performance across different device viewports and web browsers</li>
                                             <li>implemented secure user authentication by integrating Auth0 login protocols with Angular and TypeScript</li>
                                         </ul>   
                                         <h3 class="role-header stack">
@@ -152,11 +158,12 @@
                                 <div class="figure-container">
                                     <figure class="sm">
                                         <img class="project-img" src="/assets/imgs/iplan-ipad.png" alt="iPlan application on a tablet">
-                                        <figcaption class="text-center sm">iPlan on a tablet</figcaption>
+                                        <figcaption class="text-center sm">iPlan</figcaption>
                                     </figure>
-                                    <figure class="lg">
-                                        <img class="project-img" src="/assets/imgs/iplan.gif" alt="Gif of iPlan web application">
-                                    </figure>
+                                    <div class="lg img-container">
+                                        <img class="project-img" id="iplan-gif" src="/assets/imgs/iplan.gif" alt="Gif of iPlan web application">
+                                        <img class="project-img" id="iplan-img" src="/assets/imgs/iplan-ipad.png" alt="iPlan application on a tablet">
+                                    </div>
                                 </div>
                         </details>
                     </div>
@@ -173,7 +180,7 @@
                             <div class="details-container">
                                 <div class="info-container">
                                     <ul class="bullet-list">
-                                        <li>designed and developed interactive web pages for <a target="_blank" href="https://lucid.wisc.edu/how-can-machine-learning-improve-educational-technologies/">ChemTutor</a> application using HTML, CSS, JavaScript, and jQuery within Cognitive Tutor Authoring Tools (CTAT)</li>
+                                        <li>designed and developed interactive web pages for the <a target="_blank" href="https://lucid.wisc.edu/how-can-machine-learning-improve-educational-technologies/">ChemTutor</a> application using HTML, CSS, JavaScript, and jQuery within Cognitive Tutor Authoring Tools (CTAT)</li>
                                         <li>authored technical tutorials and onboarding documentation details for CTAT state management and RFID touch-screen code to streamline developer training</li>
                                     </ul>   
                                     <h3 class="role-header stack">
@@ -186,10 +193,14 @@
                                 </div>
                             </div>
                             <div class="figure-container">
-                                <figure>
-                                    <img class="project-img" src="/assets/imgs/minnie.jpg" alt="Screenshot of ChemTutor web page">
-                                    <figcaption class="text-center">Learning companion robot, Minnie</figcaption>
+                                <figure class="sm">
+                                    <img class="project-img" class="stem-lab-img" src="/assets/imgs/chemtutor.png" alt="Screenshot of ChemTutor web page">
+                                    <figcaption class="text-center">ChemTutor</figcaption>
                                 </figure>
+                                <div class="lg img-container" id="stem-lab">
+                                    <img class="project-img" src="/assets/imgs/chemtutor.png" alt="Screenshot of ChemTutor web page">
+                                    <img class="project-img" src="/assets/imgs/minnie.jpg" alt="Minnie the learning companion robot">
+                                </div>
                             </div>
                         </details>
                     </div>
@@ -212,9 +223,9 @@
                                 </div>
                             </div>
                             <div class="figure-container lg">
-                                <figure class="lg">
-                                    <img id="crest" class="project-img" width="150" src="/assets/imgs/uw-crest.svg" alt="University of Wisconsin-Madison crest">
-                                </figure>
+                                <div class="lg img-container">
+                                    <img class="project-img" id="crest" width="160" src="/assets/imgs/uw-crest.svg" alt="University of Wisconsin-Madison crest">
+                                </div>
                             </div>
                         </details>
                     </div>
@@ -224,15 +235,18 @@
         <article>
             <section id="projects">
                 <div class="exp-container">
-                    <h2 class="header-title center-title">
+                    <!-- <h2 class="header-title center-title">
                         <span class="underlined">Selected<i aria-label="a flower icon" class="icon blue">X</i></span>
                         <span class="underlined text-right">Projects</span>
+                    </h2> -->
+                    <h2 class="header-title center-title">
+                        <span>Selected<i aria-label="a flower icon" class="icon blue">X</i>Projects</span>
                     </h2>
                         <div class="work-section">
                             <details name="accordion">
                                 <summary>
                                     <h3 class="role-header lg-text">
-                                        <span>Grab A Cone (Digital Storefront Concept)</span>
+                                        <span>Grab A Cone Website</span>
                                         <span>
                                             <a target="_blank" href="https://grabacone.netlify.app/">Link to site</a>
                                         </span>
@@ -241,8 +255,8 @@
                                 <div class="details-container">
                                     <div class="info-container">
                                         <ul class="bullet-list">
-                                            <li>developed a responsive, mobile-first business showcase application using Vue.js for modular, reusable UI components</li>
-                                            <li>integrated Fetch API to dynamically retrieve and parse product data stored in an Amazon S3 bucket</li>
+                                            <li>developed a responsive, mobile-first business concept website using Vue.js for modular, reusable UI components</li>
+                                            <li>used the Fetch API to retrieve and parse product data stored in an Amazon S3 bucket</li>
                                             <li>built UIs ensuring cross-browser compatibility and WCAG compliance through WAVE validation</li>
                                         </ul>   
                                         <h3 class="role-header stack">
@@ -279,8 +293,8 @@
                                 <div class="details-container">
                                     <div class="info-container">
                                         <ul class="bullet-list">
-                                            <li>built and deployed a live Discord app using Node.js to integrate real-time voice channel audio streaming for active server communities</li>
-                                            <li>developed JavaScript timing logic to synchronize turn notifications with MP3 audio playback milestones via Discord Slash Commands</li>
+                                            <li>built and deployed a live Discord bot using Node.js to stream real-time voice channel audio for active server communities</li>
+                                            <li>wrote JavaScript timing logic to synchronize user notifications with MP3 audio playback via Discord Slash Commands</li>
                                             <li>configured and managed an Amazon EC2 instance for continuous hosting</li>   
                                         </ul>   
                                         <h3 class="role-header stack">
@@ -334,9 +348,9 @@
                                 </div>
                                 <div class="figure-container">
                                     <figure>
-                                        <img class="project-img sm" src="/assets/imgs/todo-iphone-crop.png" alt="Rendering of To Do List app on iPhone">
-                                        <img class="project-img lg" src="/assets/imgs/todo-iphone-full.png" alt="Rendering of To Do List app on iPhone">
-                                        <figcaption class="text-center sm">To Do List screenshot</figcaption>
+                                        <img class="project-img sm" src="/assets/imgs/todo-iphone-crop.png" alt="Rendering of Task Tracker app on iPhone">
+                                        <img class="project-img lg" src="/assets/imgs/todo-iphone-full.png" alt="Rendering of Task Tracker app on iPhone">
+                                        <figcaption class="text-center sm">Task Tracker screenshot</figcaption>
                                     </figure>
                                 </div>
                             </details>
@@ -346,12 +360,15 @@
         </article>
         <article id="contact">
             <section class="exp-container">
-                    <h2 class="header-title center-title">
+                    <!-- <h2 class="header-title center-title">
                         <span class="underlined">Contact<i aria-label="a flower icon" class="icon blue">)</i></span>
                         <span class="underlined text-right">Me</span>
+                    </h2> -->
+                    <h2 class="header-title center-title">
+                        <span>Contact<i aria-label="a flower icon" class="icon blue">)</i>Me</span>
                     </h2>
                 <div id="contact-list-container" class="work-section">
-                    <h3 class="role-header lg-text">
+                    <h3 class="role-header lg-text contact-text">
                         <span>Think I'd be a good fit for your team?</span>
                         <span>Feel free to reach out! ☺︎</span>
                     </h3>
