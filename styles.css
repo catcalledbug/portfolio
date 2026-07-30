@@ -681,7 +681,7 @@ p.animation-text {
     }
 
     #stem-lab > .project-img {
-        /* border: 1px solid black; */
+        justify-self: center;
         max-width: 90%;
         border-radius: 10px;
     }
@@ -927,6 +927,7 @@ p.animation-text {
 		flex-direction: column;
         height: 100%;
         width: 40%;
+        justify-self: center;
 	}
 
 	figure.lg {
@@ -943,6 +944,7 @@ p.animation-text {
 		cursor: url(/assets/imgs/custom.png), auto;
         align-self: center;
         margin-bottom: 100px;
+        width: 100%;
 	}
 
 	.sm {
@@ -1107,7 +1109,7 @@ p.animation-text {
     }
 
     .work-section .project-img {
-        max-width: 30%;
+        max-width: 50%;
     }
 
     #contact .nav-item,
@@ -1163,8 +1165,11 @@ p.animation-text {
 }
 
 @media (min-width: 1900px) {
+    .figure-container {
+        justify-self: flex-end;
+	}
     .work-section .project-img {
-        max-width: 30%;
+        max-width: 50%;
     }
     #contact-list-container, .work-section {
         max-width: 65%;
@@ -1182,7 +1187,7 @@ p.animation-text {
         width: 95%;
     }
     .details-container {
-        width: 30%;
+        width: 50%;
     }
 
 }
