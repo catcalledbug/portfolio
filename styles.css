@@ -344,14 +344,14 @@ p {
 	/* background-position: center; */
 }
 
-#intro>div {
+.img-title-container {
 	display: flex;
 	justify-content: space-evenly;
 	gap: 20px;
 	align-items: center;
 }
 
-#intro>div h2 {
+.img-title-container h2 {
 	align-self: center;
 	font-weight: 800;
 	font-family: var(--serif-light);
@@ -681,13 +681,47 @@ p.animation-text {
     .header-title > span {
         font-size: 3rem;
     }
+
+    #intro {
+        width: unset;
+        justify-self: center;
+        height: 60vh;
+    }
+
+    #intro img {
+        width: 33%;
+    }
+    .img-title-container h2 {
+        font-size: 3rem;
+    }
+    #intro p {
+        justify-self: center;
+        width: 75%;
+    }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
 	.nav-list {
 		justify-content: center;
 		gap: 30px;
 	}
+
+    .img-title-container h2 {
+        font-size: 3em;
+    }
+
+    .intro-inner {
+        display: flex;
+        width: 50%;
+    }
+    .img-title-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .img-title-container p {
+        width: 50%;
+    }
 
     .work-section .project-img {
         max-width: 50%;
@@ -825,26 +859,24 @@ p.animation-text {
 
 	#intro {
 		border-radius: 25px;
-		grid-row: 1 / 4;
-		height: 100%;
-		padding: 2.5em;
-		order: 1;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        height: 65vh;
 	}
+
+    .intro-inner {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        gap: 0;
+    }
 
 	#intro p {
-		padding-top: 40px;
-		font-size: 1.2em;
-	}
-
-	#intro div {
-		height: 50%;
-		display: flex;
-		align-items: center;
-	}
-
-	#intro div h2 {
-		font-size: 3rem;
-		text-align: center;
+        width: 50%;
+        padding: 0;
+        margin: 0;
 	}
 
 	#intro img {
@@ -904,7 +936,7 @@ p.animation-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 100px;
+        padding-top: 80px;
         height: 100%;
 	}
 
@@ -1093,14 +1125,6 @@ p.animation-text {
 		font-size: 1.3rem;
 	}
 
-	#intro div {
-		gap: 0;
-	}
-
-	#intro {
-		width: 55vw;
-	}
-
 	.header-title span {
 		font-size: 5rem;
 	}
@@ -1158,23 +1182,23 @@ p.animation-text {
 		font-size: 4rem;
 	}
 
-	#intro {
-		width: 50vw;
-	}
-
-	#intro div h2 {
-		font-size: 4rem;
-	}
-
 	#intro img {
 		height: 350px;
 		width: 350px;
 	}
 
 	#intro p {
-		padding: 30px 50px;
-		font-size: 1.5rem;
+		width: 50%;
+        padding: 25px;
 	}
+
+    .intro-inner {
+        gap: 100px;
+    }
+
+    #intro {
+        padding: 100px;
+    }
 
 	#about-grid {
 		height: 100vh;
@@ -1202,15 +1226,15 @@ p.animation-text {
 		width: 10vw;
 	}
 
-	#intro p {
-		padding: 50px 80px;
-	}
-
     .list-item a {
         width: 95%;
     }
     .details-container {
         width: 50%;
+    }
+    #intro p {
+        width: 70%;
+        padding: 0px;
     }
 
 }
