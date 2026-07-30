@@ -661,6 +661,28 @@ p.animation-text {
 	font-size: 2.5rem !important;
 }
 
+@media (min-width: 700px) {
+    .xl-text {
+        font-size: 5rem;
+    }
+    h2.header-name {
+        font-size: 3rem;
+    }
+    .list-item p {
+        font-size: 1.8rem !important;
+    }
+
+    .work-section .project-img {
+        max-width: 45%;
+    }
+    [open] summary {
+        font-size: calc(125%);
+    }
+    .header-title > span {
+        font-size: 3rem;
+    }
+}
+
 @media (min-width: 1000px) {
 	.nav-list {
 		justify-content: center;
