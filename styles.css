@@ -789,6 +789,7 @@ p.animation-text {
 		grid-row: 2;
 		padding: 0;
 		order: 2;
+        padding-left: 50px;
 	}
 
 	#about {
