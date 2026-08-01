@@ -705,7 +705,9 @@ p.animation-text {
 		justify-content: center;
 		gap: 30px;
 	}
-
+    ::details-content {
+        display: flex;
+    }
     .img-title-container h2 {
         font-size: 3em;
     }
@@ -738,8 +740,9 @@ p.animation-text {
 
     #stem-lab > .project-img {
         justify-self: center;
-        max-width: 90%;
+        max-width: 350px;
         border-radius: 10px;
+        padding-left: 30px;
     }
 
     #iplan-img,  #iplan-gif {
@@ -981,7 +984,9 @@ p.animation-text {
 		display: flex;
 		flex-direction: column;
         height: 100%;
-        width: 40%;
+        /* width: 40%; */
+        align-self: center;
+        flex-grow: 1;
         justify-self: center;
 	}
 
@@ -1156,7 +1161,7 @@ p.animation-text {
     }
 
     .work-section .project-img {
-        max-width: 50%;
+        max-width: 295px;
     }
 
     #contact .nav-item,
@@ -1198,6 +1203,7 @@ p.animation-text {
 
     #intro {
         padding: 100px;
+        max-height: 700px;
     }
 
 	#about-grid {
@@ -1214,6 +1220,7 @@ p.animation-text {
 @media (min-width: 1900px) {
     .figure-container {
         justify-self: flex-end;
+        flex-grow: 1;
 	}
     .work-section .project-img {
         max-width: 50%;
@@ -1230,7 +1237,9 @@ p.animation-text {
         width: 95%;
     }
     .details-container {
-        width: 50%;
+        /* width: 50%; */
+        max-width: 50%;
+        flex-grow: 1;
     }
     #intro p {
         width: 70%;
