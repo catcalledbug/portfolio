@@ -546,10 +546,6 @@ figure>img {
 	width: 25%;
 }
 
-/* #contact .nav-item:hover .animation-box {
-	height: 20vh;
-} */
-
 #contact .nav-item img {
 	border-bottom-right-radius: 25px;
 }
@@ -665,9 +661,11 @@ p.animation-text {
     .xl-text {
         font-size: 5rem;
     }
+
     h2.header-name {
         font-size: 3rem;
     }
+
     .list-item p {
         font-size: 1.8rem !important;
     }
@@ -675,9 +673,11 @@ p.animation-text {
     .work-section .project-img {
         max-width: 45%;
     }
+
     [open] summary {
         font-size: calc(125%);
     }
+
     .header-title > span {
         font-size: 3rem;
     }
@@ -691,9 +691,11 @@ p.animation-text {
     #intro img {
         width: 33%;
     }
+
     .img-title-container h2 {
         font-size: 3rem;
     }
+
     #intro p {
         justify-self: center;
         width: 75%;
@@ -705,9 +707,11 @@ p.animation-text {
 		justify-content: center;
 		gap: 30px;
 	}
+
     ::details-content {
         display: flex;
     }
+
     .img-title-container h2 {
         font-size: 3em;
     }
@@ -716,11 +720,13 @@ p.animation-text {
         display: flex;
         width: 50%;
     }
+
     .img-title-container {
         display: flex;
         flex-direction: column;
         gap: 25px;
     }
+
     .img-title-container p {
         width: 50%;
     }
@@ -745,7 +751,8 @@ p.animation-text {
         padding-left: 30px;
     }
 
-    #iplan-img,  #iplan-gif {
+    #iplan-img, 
+    #iplan-gif {
         max-width: 350px;
         padding: 15px;
     }
@@ -756,6 +763,7 @@ p.animation-text {
 		border: none;
 		font-size: 2rem;
 	}
+
     .stack {
         padding: 0;
     }
@@ -766,7 +774,8 @@ p.animation-text {
         align-items: flex-start;
     }
     
-    #contact-list-container, .work-section {
+    #contact-list-container, 
+    .work-section {
         max-width: 95%;
     }
 
@@ -1222,9 +1231,11 @@ p.animation-text {
         justify-self: flex-end;
         flex-grow: 1;
 	}
+
     .work-section .project-img {
         max-width: 50%;
     }
+
     #contact-list-container, .work-section {
         max-width: 65%;
     }
@@ -1236,11 +1247,13 @@ p.animation-text {
     .list-item a {
         width: 95%;
     }
+
     .details-container {
         /* width: 50%; */
         max-width: 50%;
         flex-grow: 1;
     }
+
     #intro p {
         width: 70%;
         padding: 0px;
@@ -1249,7 +1262,6 @@ p.animation-text {
 }
 
 @media (min-width: 2140px) {
-
 	#about-grid .header-title {
 		padding: 0 70px;
 	}
@@ -1265,7 +1277,6 @@ p.animation-text {
 }
 
 @media (min-width: 2440px) {
-
 	#about-grid .header-title {
 		padding: 0 80px;
 	}
