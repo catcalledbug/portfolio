@@ -676,6 +676,7 @@ p.animation-text {
 
     [open] summary {
         font-size: calc(125%);
+        padding: 0;
     }
 
     .header-title > span {
@@ -699,6 +700,10 @@ p.animation-text {
     #intro p {
         justify-self: center;
         width: 75%;
+    }
+
+    summary {
+        pointer-events: none;
     }
 }
 
