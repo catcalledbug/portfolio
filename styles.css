@@ -706,6 +706,9 @@ p.animation-text {
     summary {
         pointer-events: none;
     }
+    .tulips {
+		padding: 13% 0;
+	}
 
 }
 
@@ -838,7 +841,7 @@ p.animation-text {
 	}
 
 	.tulips {
-		padding: 10% 0;
+		padding: 5% 0;
 	}
 
 	#contact .nav-item {
@@ -1273,6 +1276,9 @@ p.animation-text {
     #contact .stem {
 		width: 12%;
 	}
+    .list-item a {
+        max-width: 200px;
+    }
 
 }
 
