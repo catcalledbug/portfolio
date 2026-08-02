@@ -1145,7 +1145,8 @@ p.animation-text {
 		font-weight: 900;
 	}
 
-	.stem {
+	.stem, 
+    #contact .stem {
 		width: 15%;
 	}
 
@@ -1183,7 +1184,8 @@ p.animation-text {
         max-width: 85%;
     }
     
-    .stem {
+    .stem, 
+    #contact .stem {
 		width: 12%;
 	}
 
