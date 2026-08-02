@@ -709,7 +709,13 @@ p.animation-text {
         width: 75%;
     }
 
-    summary {
+    #about a,
+    #projects a {
+        cursor: pointer !important;
+        pointer-events: visible;
+    }
+
+    details {
         pointer-events: none;
     }
 
