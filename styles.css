@@ -176,6 +176,7 @@ li {
 .nav-item,
 .animation-box {
 	height: 15vh;
+    max-height: 145px;
 	width: 29vw;
 	border-bottom-right-radius: 75px;
 	border-bottom-left-radius: 75px;
@@ -185,6 +186,7 @@ li {
 	/* font-family: var(--sans-book); */
 	z-index: 3;
 	color: white !important;
+    max-width: 165px;
 }
 
 #contact .nav-item,
@@ -289,7 +291,7 @@ h2.header-name,
 	text-align: center;
 	color: black;
     width: 130%;
-    max-width: 175px;
+    max-width: 165px;
 }
 
 .sans {
@@ -663,6 +665,10 @@ p.animation-text {
         font-size: 5rem;
     }
 
+    .stem {
+        width: 30px;
+    }
+
     h2.header-name {
         font-size: 3rem;
     }
@@ -706,10 +712,20 @@ p.animation-text {
     summary {
         pointer-events: none;
     }
+
     .tulips {
-		padding: 13% 0;
+		padding: 90px 0;
 	}
 
+    .nav-item {
+        height: 160px;
+        max-height: 160px;
+    }
+
+    .nav-item, .animation-box {
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
 }
 
 @media (min-width: 900px) {
@@ -794,7 +810,7 @@ p.animation-text {
     }
 
     .list-item a {
-        width: 130%;
+        width: 185px;
         overflow: hidden;
     }
 
@@ -820,16 +836,20 @@ p.animation-text {
 		font-size: 2rem !important;
 	}
 
-	.animation-text,
-	.list-item p {
+	.animation-text {
 		font-size: 2.5rem !important;
 	}
+
+    .list-item p {
+        font-size: 1.8rem;
+    }
 
 	.nav-item,
 	.nav-item:hover .animation-box,
 	#contact .nav-item,
 	#contact .nav-item:hover .animation-box {
-		height: 20vh;
+		height: 180px;
+        max-height: 200px;
 	}
 
 	.stem {
@@ -841,7 +861,7 @@ p.animation-text {
 	}
 
 	.tulips {
-		padding: 5% 0;
+		padding: 40px 0;
 	}
 
 	#contact .nav-item {
@@ -1043,7 +1063,7 @@ p.animation-text {
 	}
 
 	.list-item {
-		width: 15vw;
+		width: 11vw;
 	}
 
 	h2.header-name {
@@ -1089,10 +1109,6 @@ p.animation-text {
     .xl-text {
         font-size: 5rem;
     }
-
-    .list-item p {
-        font-size: 2rem !important;
-    }
 }
 
 @media (min-width: 1130px) {
@@ -1101,11 +1117,7 @@ p.animation-text {
 	}
 
     .list-item a {
-        min-width: 155px;
-    }
-
-    .list-item p {
-        font-size: 1.5rem !important;
+        min-width: 185px;
     }
 
     p.animation-text {
@@ -1127,16 +1139,12 @@ p.animation-text {
         max-width: 12vw;
     }
 
-    .list-item a {
-        width: 100%;
-    }
-
     .list-item {
-        width: 11vw;
+        width: 155px;
     }
 
 	.tulips {
-		padding: 1% 0;
+		padding: 15px 0;
 	}
     
 	.mini-text {
@@ -1146,7 +1154,7 @@ p.animation-text {
 	}
 
 	.stem {
-		width: 15%;
+		width: 35px;
 	}
 
 	#intro p {
@@ -1162,7 +1170,7 @@ p.animation-text {
 	}
 
 	#contact .stem {
-		width: 15%;
+		width: 35px;
 		height: 20vh;
 	}
 
@@ -1207,7 +1215,7 @@ p.animation-text {
     }
 
 	h2.header-name {
-		font-size: 4rem;
+		font-size: 4.5rem;
 	}
 
 	#intro img {
@@ -1239,7 +1247,7 @@ p.animation-text {
         display: grid;
     }
     .tulips {
-		padding: 1% 0;
+		padding: 20px 0;
 	}
 }
 
@@ -1277,10 +1285,10 @@ p.animation-text {
     }
     .stem, 
     #contact .stem {
-		width: 12%;
+		width: 35px;
 	}
     .list-item a {
-        max-width: 200px;
+        max-width: 185px;
     }
 
 }
