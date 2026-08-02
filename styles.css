@@ -1238,6 +1238,9 @@ p.animation-text {
     #about section {
         display: grid;
     }
+    .tulips {
+		padding: 1% 0;
+	}
 }
 
 @media (min-width: 1900px) {
