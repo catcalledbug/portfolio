@@ -1116,6 +1116,10 @@ p.animation-text {
 		font-size: 8rem;
 	}
 
+    h2.header-name {
+        font-size: 3.5rem;
+    }
+
     .list-item a {
         min-width: 185px;
     }
