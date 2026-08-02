@@ -666,6 +666,16 @@ p.animation-text {
         font-size: 3rem;
     }
 
+    .list-item {
+        min-width: 160px;
+    }
+
+    .list-item a,
+    .animation-box {
+        width: 110%;
+        max-width: 180px;
+    }
+
     .list-item p {
         font-size: 1.8rem !important;
     }
@@ -789,7 +799,6 @@ p.animation-text {
     }
 
     .list-item a {
-        width: 130%;
         overflow: hidden;
     }
 
@@ -1173,6 +1182,10 @@ p.animation-text {
     #contact-list-container, .work-section {
         max-width: 85%;
     }
+    
+    .stem {
+		width: 12%;
+	}
 
     .work-section .project-img {
         max-width: 295px;
