@@ -289,6 +289,7 @@ h2.header-name,
 	text-align: center;
 	color: black;
     width: 130%;
+    max-width: 175px;
 }
 
 .sans {
@@ -666,16 +667,6 @@ p.animation-text {
         font-size: 3rem;
     }
 
-    .list-item {
-        min-width: 160px;
-    }
-
-    .list-item a,
-    .animation-box {
-        width: 110%;
-        max-width: 180px;
-    }
-
     .list-item p {
         font-size: 1.8rem !important;
     }
@@ -715,6 +706,7 @@ p.animation-text {
     summary {
         pointer-events: none;
     }
+
 }
 
 @media (min-width: 900px) {
@@ -799,6 +791,7 @@ p.animation-text {
     }
 
     .list-item a {
+        width: 130%;
         overflow: hidden;
     }
 
@@ -1104,6 +1097,10 @@ p.animation-text {
 		font-size: 8rem;
 	}
 
+    .list-item a {
+        min-width: 155px;
+    }
+
     .list-item p {
         font-size: 1.5rem !important;
     }
@@ -1145,8 +1142,7 @@ p.animation-text {
 		font-weight: 900;
 	}
 
-	.stem, 
-    #contact .stem {
+	.stem {
 		width: 15%;
 	}
 
@@ -1183,11 +1179,6 @@ p.animation-text {
     #contact-list-container, .work-section {
         max-width: 85%;
     }
-    
-    .stem, 
-    #contact .stem {
-		width: 12%;
-	}
 
     .work-section .project-img {
         max-width: 295px;
@@ -1278,6 +1269,10 @@ p.animation-text {
         width: 70%;
         padding: 0px;
     }
+    .stem, 
+    #contact .stem {
+		width: 12%;
+	}
 
 }
 
@@ -1289,11 +1284,6 @@ p.animation-text {
 	img#crest {
 		width: 200px !important;
 	}
-
-	#contact .stem {
-		width: 10%;
-	}
-
 }
 
 @media (min-width: 2440px) {
@@ -1315,10 +1305,6 @@ p.animation-text {
 
 	.nav-list {
 		gap: 0;
-	}
-
-	.stem {
-		width: 10%;
 	}
 
 	.list-item {
