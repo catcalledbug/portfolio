@@ -665,6 +665,10 @@ p.animation-text {
         font-size: 5rem;
     }
 
+    .work-section {
+        padding: 25px 0;
+    }
+
     .stem {
         width: 30px;
     }
@@ -686,6 +690,10 @@ p.animation-text {
         padding: 0;
     }
 
+    .work-section:has(details[open]) {
+        padding: 25px;
+    }
+
     .header-title > span {
         font-size: 3rem;
     }
@@ -693,7 +701,6 @@ p.animation-text {
     #intro {
         width: unset;
         justify-self: center;
-        height: 60vh;
     }
 
     #intro img {
@@ -715,10 +722,6 @@ p.animation-text {
         pointer-events: visible;
     }
 
-    details {
-        pointer-events: none;
-    }
-
     .tulips {
 		padding: 90px 0;
 	}
@@ -732,12 +735,45 @@ p.animation-text {
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
     }
+
+    figure {
+        background-color: transparent;
+    }
 }
 
 @media (min-width: 900px) {
-	.nav-list {
+    .uw-section .details-container {
+        padding-top: 100px;
+    }
+
+    summary#uw {
+        position: absolute;
+    }
+
+    details {
+        pointer-events: none;
+    }
+    
+    .nav-list {
 		justify-content: center;
 		gap: 30px;
+	}
+
+    .details-container, summary, .info-container {
+        background-color: transparent !important;
+    }
+
+    .work-section {
+        background-color: transparent;
+    }
+
+    #intro {
+		border-radius: 25px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        max-height: 700px;
+        background-color: var(--white);
 	}
 
     ::details-content {
@@ -780,7 +816,7 @@ p.animation-text {
         justify-self: center;
         max-width: 350px;
         border-radius: 10px;
-        padding-left: 30px;
+        margin-left: 30px;
     }
 
     #iplan-img, 
@@ -905,20 +941,13 @@ p.animation-text {
 		scroll-margin-top: -75px;
 	}
 
-	#intro {
-		border-radius: 25px;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        height: 65vh;
-	}
-
     .intro-inner {
         width: 100%;
         justify-content: space-around;
         align-items: center;
         height: 100%;
-        gap: 0;
+        gap: 50px;
+        padding: 50px;
     }
 
 	#intro p {
@@ -927,9 +956,9 @@ p.animation-text {
         margin: 0;
 	}
 
-	#intro img {
-		height: 300px;
-		width: 300px;
+    #intro img {
+		height: 350px;
+		width: 350px;
 	}
 
 	.project-img {
@@ -959,8 +988,9 @@ p.animation-text {
 	}
 
 	.bullet-list {
-		font-size: 1rem;
+		font-size: 1.2rem;
         width: 100%;
+        padding: 25px;
 	}
 
 	.bullet-list>li {
@@ -977,14 +1007,12 @@ p.animation-text {
 	.details-container {
         width: 50%;
         float: left;
-        background-color: var(--white);
         padding: 0;
         border-bottom-right-radius: 25px;
         border-bottom-left-radius: 25px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 80px;
         height: 100%;
 	}
 
@@ -996,7 +1024,7 @@ p.animation-text {
 	}
 
 	.lg-text {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	.header-title {
@@ -1019,9 +1047,8 @@ p.animation-text {
 		cursor: url(/assets/imgs/custom.png), auto;
         border-top-right-radius: 25px;
         border-top-left-radius: 25px;
-        width: 50%;
+        width: 100%;
         padding-bottom: 0;
-        position: absolute;
         padding: 0;
 	}
 
@@ -1120,6 +1147,11 @@ p.animation-text {
 @media (min-width: 1130px) {
 	.xl-text {
 		font-size: 8rem;
+	}
+    
+    #intro img {
+		height: 400px;
+		width: 400px;
 	}
 
     h2.header-name {
@@ -1228,23 +1260,13 @@ p.animation-text {
 		font-size: 4.5rem;
 	}
 
-	#intro img {
-		height: 350px;
-		width: 350px;
-	}
-
 	#intro p {
 		width: 50%;
         padding: 25px;
 	}
 
     .intro-inner {
-        gap: 100px;
-    }
-
-    #intro {
-        padding: 100px;
-        max-height: 700px;
+        gap: 25px;
     }
 
 	#about-grid {
@@ -1289,10 +1311,6 @@ p.animation-text {
         flex-grow: 1;
     }
 
-    #intro p {
-        width: 70%;
-        padding: 0px;
-    }
     .stem, 
     #contact .stem {
 		width: 35px;
