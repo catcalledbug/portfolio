@@ -763,10 +763,6 @@ p.animation-text {
         background-color: transparent !important;
     }
 
-    .work-section {
-        background-color: transparent;
-    }
-
     #intro {
 		border-radius: 25px;
         display: flex;
@@ -1060,6 +1056,7 @@ p.animation-text {
         align-self: center;
         flex-grow: 1;
         justify-self: center;
+        padding-bottom: 50px;
 	}
 
 	figure.lg {
@@ -1072,11 +1069,12 @@ p.animation-text {
 
 	.work-section {
 		border-radius: 25px;
-		padding: 1.5em;
+		padding: 50px;
 		cursor: url(/assets/imgs/custom.png), auto;
         align-self: center;
         margin-bottom: 100px;
         width: 100%;
+        background-color: var(--white);
 	}
 
 	.sm {
