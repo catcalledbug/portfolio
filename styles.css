@@ -173,6 +173,12 @@ li {
     border-radius: 25px;
 }
 
+.sublist li {
+    list-style: circle;
+    margin-left: 25px;
+    padding: 10px 0px;
+}
+
 .nav-item,
 .animation-box {
 	height: 15vh;
