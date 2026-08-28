@@ -1383,4 +1383,12 @@ p.animation-text {
 	.list-item {
 		width: 8vw;
 	}
+
+    #intro {
+        padding: 100px;
+    }
+
+    img#crest {
+        margin-top: 50px;
+    }
 }
