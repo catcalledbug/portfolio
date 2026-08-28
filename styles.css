@@ -318,7 +318,10 @@ p {
 #about a,
 #projects a {
 	border-bottom: solid 1px var(--dark-gray) !important;
-	color: var(--dark-gray) !important;
+}
+
+summary > .role-header > span a { 
+    color: var(--dark-gray);
 }
 
 #about a::after,
