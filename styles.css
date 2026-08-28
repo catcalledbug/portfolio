@@ -774,6 +774,10 @@ p.animation-text {
         padding-top: 100px;
     }
 
+    .bullet-list>li, .stack>p {
+        font-size: 1.1rem;
+    }
+
     span.role-header.stack {
         font-size: 1.3rem;
     }
