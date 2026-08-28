@@ -1388,6 +1388,20 @@ p.animation-text {
         padding: 100px;
     }
 
+    #intro p {
+        font-size: 1.2rem;
+    }
+
+    span.role-header.stack {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--dark-gray);
+    }
+
+    .bullet-list>li {
+        font-size: 1.2rem;
+    }
+
     img#crest {
         margin-top: 50px;
     }
