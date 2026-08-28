@@ -774,6 +774,10 @@ p.animation-text {
         padding-top: 100px;
     }
 
+    img#crest {
+        margin-top: 50px;
+    }
+
     .bullet-list>li, .stack>p {
         font-size: 1.1rem;
     }
@@ -1404,9 +1408,5 @@ p.animation-text {
 
     .bullet-list>li {
         font-size: 1.2rem;
-    }
-
-    img#crest {
-        margin-top: 50px;
     }
 }
