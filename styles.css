@@ -640,6 +640,11 @@ figure>img {
 	justify-content: center;
 }
 
+.about-me-text>p span {
+    font-weight: 800;
+    font-family: var(--sans-med);
+}
+
 #to-top-container a>p {
 	font-size: .9rem;
 	color: var(--dark-gray);
