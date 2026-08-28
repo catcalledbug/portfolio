@@ -92,13 +92,13 @@ h3 {
 	font-family: var(--sans-book);
 	color: var(--dark-gray);
 	padding-top: 100px;
-	padding-bottom: 30px;
+	padding-bottom: 0;
     text-align: center;
 }
 
 .header-title>span {
 	font-weight: 800;
-	font-size: 2.7rem;
+	font-size: 2.6rem;
 }
 
 .flair-letter {
@@ -141,7 +141,7 @@ figure {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: var(--yellow);
+	/* background-color: var(--yellow); */
 	border-bottom-right-radius: 25px;
 	padding-bottom: 10px;
 }
@@ -300,6 +300,8 @@ h2.header-name,
     max-width: 165px;
 }
 
+
+
 .sans {
 	font-family: var(--sans-book) !important;
 	font-weight: 600 !important;
@@ -334,7 +336,7 @@ p {
 }
 
 #intro {
-	padding: 1.5em;
+	padding: 25px;
 	background-color: var(--white);
 	border-top-right-radius: 25px;
 	border-bottom-right-radius: 25px;
@@ -355,7 +357,6 @@ p {
 
 .img-title-container {
 	display: flex;
-	justify-content: space-evenly;
 	gap: 20px;
 	align-items: center;
 }
@@ -370,30 +371,54 @@ p {
 
 #intro p {
 	padding-top: 1em;
-	font-size: 1.1rem;
+	font-size: .9rem;
 }
 
-.work-section h3,
-#intro span {
+span.role-header.stack {
+    font-size: 1.2rem;
+    color: black;
+    font-family: var(--sans-med);
+}
+
+.details-container {
+    padding: 0 1em;
+}
+
+.work-section h3 {
 	font-family: var(--sans-med);
 	width: 100%;
 }
+
+/* span.intro-heading {
+    font-weight: 800;
+    font-size: 3rem;
+}  */
 
 article {
 	min-height: 50vh;
 }
 
 .bullet-list {
-	padding: 2em;
 	padding-top: 0;
+    padding-left: 1em;
 }
+
 
 .bullet-list>li,
 .stack>p {
 	line-height: 1.2;
-	color: var(--dark-gray);
-	list-style: disc !important;
-	padding: 10px 0px;
+	list-style: disc;
+	padding: 0.5em 0;
+    font-size: .9rem;
+    color: black;
+}
+
+.about-me-text .bullet-list>li {
+    list-style: none;
+}
+
+.about-me-text .bullet-list {
+    padding-left: 0;
 }
 
 .bullet-list>li>a {
@@ -413,7 +438,7 @@ article {
 }
 
 .work-section:has(details[open]) {
-	padding-bottom: 0;
+	/* padding-bottom: 0; */
 }
 
 details {
@@ -432,7 +457,7 @@ summary {
 }
 
 [open] summary {
-	padding: 1em 1em;
+	padding: 0.5em 1em;
 	font-size: calc(105%);
 }
 
@@ -480,7 +505,6 @@ h3.role-header span {
 }
 
 .stack>span {
-	margin-bottom: 1em;
 	width: fit-content;
 	border-bottom: 1px solid black;
 }
@@ -493,7 +517,6 @@ h3.role-header span {
 }
 
 .stack {
-	padding: 0 1em;
 }
 
 .animation-box {
@@ -719,7 +742,6 @@ p.animation-text {
 
     #intro p {
         justify-self: center;
-        width: 75%;
     }
 
     #about a,
@@ -752,6 +774,10 @@ p.animation-text {
         padding-top: 100px;
     }
 
+    span.role-header.stack {
+        font-size: 1.3rem;
+    }
+
     summary#uw {
         position: absolute;
     }
@@ -774,7 +800,6 @@ p.animation-text {
         display: flex;
         width: 100%;
         justify-content: center;
-        max-height: 700px;
         background-color: var(--white);
 	}
 
@@ -795,10 +820,8 @@ p.animation-text {
         display: flex;
         flex-direction: column;
         gap: 25px;
-    }
-
-    .img-title-container p {
-        width: 50%;
+        height: 100%;
+        width: 100%;
     }
 
     .work-section .project-img {
@@ -823,7 +846,7 @@ p.animation-text {
 
     #iplan-img, 
     #iplan-gif {
-        max-width: 350px;
+        max-width: 325px;
         padding: 15px;
     }
 
@@ -835,7 +858,6 @@ p.animation-text {
 	}
 
     .stack {
-        padding: 0;
     }
 
     article.text-box {
@@ -846,7 +868,7 @@ p.animation-text {
     
     #contact-list-container, 
     .work-section {
-        max-width: 95%;
+
     }
 
     #experience {
@@ -945,22 +967,14 @@ p.animation-text {
 
     .intro-inner {
         width: 100%;
-        justify-content: space-around;
         align-items: center;
         height: 100%;
         gap: 50px;
-        padding: 50px;
     }
 
-	#intro p {
-        width: 50%;
-        padding: 0;
-        margin: 0;
-	}
-
     #intro img {
-		height: 350px;
-		width: 350px;
+		height: 200px;
+		width: 200px;
 	}
 
 	.project-img {
@@ -992,11 +1006,11 @@ p.animation-text {
 	.bullet-list {
 		font-size: 1.2rem;
         width: 100%;
-        padding: 25px;
 	}
 
 	.bullet-list>li {
 		line-height: 1.3;
+        padding-top: .5em;
 	}
 
 	.info-container {
@@ -1026,7 +1040,7 @@ p.animation-text {
 	}
 
 	.lg-text {
-		font-size: 2.5rem;
+		font-size: 2.1rem;
 	}
 
 	.header-title {
@@ -1050,8 +1064,7 @@ p.animation-text {
         border-top-right-radius: 25px;
         border-top-left-radius: 25px;
         width: 100%;
-        padding-bottom: 0;
-        padding: 0;
+        padding-left: 0;
 	}
 
 	.figure-container {
@@ -1075,7 +1088,7 @@ p.animation-text {
 
 	.work-section {
 		border-radius: 25px;
-		padding: 50px;
+		padding: 25px;
 		cursor: url(/assets/imgs/custom.png), auto;
         align-self: center;
         margin-bottom: 100px;
@@ -1140,7 +1153,7 @@ p.animation-text {
 	}
 
 	.header-title span {
-		font-size: 4rem;
+		font-size: 5rem;
 	}
 
     .xl-text {
@@ -1204,7 +1217,7 @@ p.animation-text {
 	}
 
 	#intro p {
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 	}
 
 	.header-title span {
@@ -1237,6 +1250,11 @@ p.animation-text {
         max-width: 85%;
     }
 
+    .bullet-list>li,
+    .stack>p {
+    font-size: 1.1rem;
+}
+
     .work-section .project-img {
         max-width: 295px;
     }
@@ -1265,8 +1283,8 @@ p.animation-text {
 	}
 
 	#intro p {
-		width: 50%;
         padding: 25px;
+        padding-left: 0;
 	}
 
     .intro-inner {
@@ -1285,6 +1303,12 @@ p.animation-text {
     .tulips {
 		padding: 20px 0;
 	}
+
+    #iplan-img, 
+    #iplan-gif {
+        width: 400px;
+        max-width: 400px;
+    }
 }
 
 @media (min-width: 1900px) {
@@ -1319,10 +1343,10 @@ p.animation-text {
     #contact .stem {
 		width: 35px;
 	}
+
     .list-item a {
         max-width: 185px;
     }
-
 }
 
 @media (min-width: 2140px) {
