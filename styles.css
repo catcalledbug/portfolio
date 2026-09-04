@@ -91,9 +91,9 @@ h3 {
 .header-title {
 	font-family: var(--sans-book);
 	color: var(--dark-gray);
-	padding-top: 100px;
+	/* padding-top: 100px;
 	padding-bottom: 0;
-    text-align: center;
+    text-align: center; */
 }
 
 .header-title>span {
@@ -346,22 +346,21 @@ summary > .role-header > span a {
 }
 
 #intro img {
-	width: 50%;
+	width: 200px;
 	border-radius: 50%;
-	float: left;
 	outline: 5px solid var(--red);
 	outline-offset: -5px;
-	/* background-image: url(/assets/imgs/headshot.JPG); */
-	height: 50%;
-	/* background-size: cover; */
-	/* background-repeat: no-repeat; */
-	/* background-position: center; */
 }
 
 .img-title-container {
 	display: flex;
 	gap: 20px;
 	align-items: center;
+}
+
+.headshot-container {
+    display: flex;
+    justify-content: center;
 }
 
 .img-title-container h2 {
@@ -387,10 +386,10 @@ span.role-header.stack {
     padding: 0 1em;
 }
 
-.work-section h3 {
+/* .work-section h3 {
 	font-family: var(--sans-med);
 	width: 100%;
-}
+} */
 
 /* span.intro-heading {
     font-weight: 800;
@@ -702,6 +701,10 @@ p.animation-text {
         padding-bottom: 10px;
     }
 
+    .header-name {
+        font-size: 2.5rem;
+    }
+
     summary {
         font-size: .75rem;
     }
@@ -720,6 +723,14 @@ p.animation-text {
 
     #intro p {
         font-size: .8rem;
+    }
+
+    #intro {
+        margin-top: 25px;
+    }
+
+    .headshot-container {
+        padding-bottom: 25px;
     }
 }
 @media (min-width: 700px) {
