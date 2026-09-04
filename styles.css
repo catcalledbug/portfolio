@@ -696,7 +696,32 @@ figure>img {
 p.animation-text {
 	font-size: 2.5rem !important;
 }
+@media (min-width: 200px) {
+    .header-title > span {
+        font-size: 2rem;
+        padding-bottom: 10px;
+    }
 
+    summary {
+        font-size: .75rem;
+    }
+
+    [open] summary {
+        font-size: .8rem;
+    }
+
+    #contact .nav-item {
+        max-height: 100px;
+    }
+
+    .bullet-list>li, .stack>p {
+        font-size: .7rem;
+    }
+
+    #intro p {
+        font-size: .8rem;
+    }
+}
 @media (min-width: 700px) {
     .xl-text {
         font-size: 5rem;
