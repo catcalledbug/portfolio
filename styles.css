@@ -179,7 +179,7 @@ li {
 
 .nav-item,
 .animation-box {
-	height: 15vh;
+	height: 13vh;
     max-height: 145px;
 	width: 29vw;
 	border-bottom-right-radius: 75px;
@@ -316,7 +316,7 @@ p {
 }
 
 summary > .role-header > span a { 
-    color: var(--dark-gray);
+    color: #000000;
 }
 
 #about a::after,
@@ -334,17 +334,24 @@ summary > .role-header > span a {
 }
 
 #intro {
-	padding: 25px;
+	padding: 20px;
 	background-color: var(--white);
 	border-top-right-radius: 25px;
 	border-bottom-right-radius: 25px;
 }
 
 #intro img {
-	width: 200px;
+	/* width: 200px;
 	border-radius: 50%;
 	outline: 5px solid var(--red);
-	outline-offset: -5px;
+	outline-offset: -5px; */
+    border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+    width: 100%;
+    object-fit: cover;
+    min-height: 250px;
+    outline: 5px solid var(--dark-gray);
+    outline-offset: -5px;
 }
 
 .img-title-container {
@@ -430,16 +437,17 @@ article {
 	font-weight: 900 !important;
 }
 
+#about span {
+    font-weight: 600;
+    font-family: var(--sans-med);
+}
+
 .work-section {
 	background-color: var(--white);
 	padding: 15px 0;
 	border-top-right-radius: 25px;
 	border-bottom-right-radius: 25px;
 	margin-bottom: 15px;
-}
-
-.work-section:has(details[open]) {
-	/* padding-bottom: 0; */
 }
 
 details {
@@ -714,6 +722,7 @@ p.animation-text {
 
     summary {
         justify-content: space-between;
+        padding: 0 20px;
     }
 
     [open] summary .role-header {
@@ -738,7 +747,7 @@ p.animation-text {
     }
 
     #intro {
-        margin-top: 25px;
+        margin-top: 20px;
     }
 
     .headshot-container {
