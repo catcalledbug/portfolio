@@ -75,7 +75,6 @@ h2,
 h3 {
 	padding: 0;
 	margin: 0;
-	color: var(--dark-gray);
 	font-weight: unset;
 }
 
@@ -90,7 +89,6 @@ h3 {
 
 .header-title {
 	font-family: var(--sans-book);
-	color: var(--dark-gray);
 	/* padding-top: 100px;
 	padding-bottom: 0;
     text-align: center; */
@@ -289,7 +287,6 @@ h2.header-name,
 	font-family: var(--serif-light);
 	padding-top: 10px;
 	font-weight: 800;
-	color: var(--dark-gray);
 }
 
 .list-item a {
@@ -299,8 +296,6 @@ h2.header-name,
     width: 130%;
     max-width: 165px;
 }
-
-
 
 .sans {
 	font-family: var(--sans-book) !important;
@@ -371,12 +366,16 @@ summary > .role-header > span a {
 	text-align: center;
 }
 
+.title-icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 #intro p {
-	padding-top: 1em;
 	font-size: .9rem;
 }
 
-span.role-header.stack {
+.role-header {
     font-size: 1.2rem;
     color: black;
     font-family: var(--sans-med);
@@ -410,7 +409,7 @@ article {
 .stack>p {
 	line-height: 1.2;
 	list-style: disc;
-	padding: 0.5em 0;
+	padding: 5px 0;
     font-size: .9rem;
     color: black;
 }
@@ -449,17 +448,17 @@ details {
 
 summary {
 	transition: all 0.5s ease;
-	padding: 0.5em 1em;
+	padding: 5px 10px;
 	font-weight: 700;
 	color: #333;
 	cursor: pointer;
 	display: flex;
-	gap: 0.5em;
+	gap: 5px;
 	width: 100%;
 }
 
 [open] summary {
-	padding: 0.5em 1em;
+	padding: 5px 10px;
 	font-size: calc(105%);
 }
 
@@ -487,7 +486,7 @@ details[open] summary::after {
 
 details[open] #uw::after {
 	content: url(/assets/imgs/uw-crest.svg);
-	width: 40px;
+	width: 35px;
 	transform: rotate(360deg);
 }
 
@@ -602,7 +601,11 @@ figure>img {
 	font-family: var(--icon-font);
 	font-size: .8em;
 	font-style: normal;
-	padding-left: 5px;
+    padding-right: 5px;
+}
+
+#intro .bullet-list>li, #intro .stack>p {
+    font-size: .8rem;
 }
 
 .tulips {
@@ -684,7 +687,7 @@ figure>img {
 }
 
 #contact .work-section {
-	padding: 1.5em;
+	padding: 25px;
 }
 
 .animation-text,
@@ -705,12 +708,20 @@ p.animation-text {
         font-size: 2.5rem;
     }
 
-    summary {
-        font-size: .75rem;
+    summary .role-header {
+        font-size: .9rem;
     }
 
-    [open] summary {
-        font-size: .8rem;
+    summary {
+        justify-content: space-between;
+    }
+
+    [open] summary .role-header {
+        font-size: .95rem;
+    }
+
+    figcaption {
+        font-size: .6rem;
     }
 
     #contact .nav-item {
@@ -723,6 +734,7 @@ p.animation-text {
 
     #intro p {
         font-size: .8rem;
+        margin-top: 5px;
     }
 
     #intro {
@@ -731,11 +743,30 @@ p.animation-text {
 
     .headshot-container {
         padding-bottom: 25px;
+        text-align: center;
+    }
+    .xsm {
+        display: block;
+    }
+    .medium { 
+        display: none;
     }
 }
 @media (min-width: 700px) {
     .xl-text {
         font-size: 5rem;
+    }
+
+    .headshot-container {
+        padding-bottom: 0px;
+    }
+
+    .xsm {
+        display: none;
+    }
+
+    .medium {
+        display: block;
     }
 
     .work-section {
@@ -763,6 +794,10 @@ p.animation-text {
         padding: 0;
     }
 
+    summary {
+        padding: 5px 25px;
+    }
+
     .work-section:has(details[open]) {
         padding: 25px;
     }
@@ -776,16 +811,13 @@ p.animation-text {
         justify-self: center;
     }
 
-    #intro img {
-        width: 33%;
-    }
-
     .img-title-container h2 {
         font-size: 3rem;
     }
 
     #intro p {
         justify-self: center;
+        margin-top: 0;
     }
 
     #about a,
@@ -811,6 +843,19 @@ p.animation-text {
     figure {
         background-color: transparent;
     }
+
+    .details-container {
+        padding: 0;
+    }
+
+    summary .role-header, #intro .role-header, summary a {
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    [open] summary .role-header {
+        font-size: 1.5rem;
+    }
 }
 
 @media (min-width: 900px) {
@@ -826,7 +871,7 @@ p.animation-text {
         font-size: 1.1rem;
     }
 
-    span.role-header.stack {
+    span.role-header {
         font-size: 1.3rem;
     }
 
@@ -1062,7 +1107,7 @@ p.animation-text {
 
 	.bullet-list>li {
 		line-height: 1.3;
-        padding-top: .5em;
+        padding-top: 5px;
 	}
 
 	.info-container {
@@ -1444,10 +1489,9 @@ p.animation-text {
         font-size: 1.2rem;
     }
 
-    span.role-header.stack {
+    span.role-header {
         font-size: 1.8rem;
         font-weight: 800;
-        color: var(--dark-gray);
     }
 
     .bullet-list>li {
