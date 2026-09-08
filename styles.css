@@ -250,10 +250,9 @@ li {
 
 .nav-item,
 .animation-box, 
-#contact > .list-item:hover .animation-box  {max-width: 80px;
-    min-width: 60px;
-	height: 100px;
-	width: 110px;
+#contact > .list-item:hover .animation-box  {
+	height: 90px;
+	width: 100px;
 	border-bottom-right-radius: 75px;
 	border-bottom-left-radius: 75px;
 	display: flex;
@@ -262,7 +261,7 @@ li {
 	/* font-family: var(--sans-book); */
 	z-index: 3;
 	color: white !important;
-    max-width: 165px;
+
 }
 
 #contact .nav-item,
@@ -288,7 +287,7 @@ li {
 }
 
 .list-item p {
-	font-size: 1.2rem !important;
+	font-size: 1.2rem;
 	font-family: var(--serif-light);
 	margin: 0;
 	padding-bottom: 15px;
@@ -298,8 +297,7 @@ li {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-    max-width: 80px;
-    min-width: 60px;
+    width: 66px;
 }
 
 #about {
@@ -364,9 +362,9 @@ span.header-name,
 	font-size: 1.2rem;
 	text-align: center;
 	color: black;
-    max-width: 100px;
+    max-width: 90px;
     font-weight: 800;
-    min-width: 70px;
+    min-width: 50px;
 }
 
 .sans {
@@ -400,8 +398,6 @@ summary > .role-header > span a {
 #contact .nav-item p::after {
 	content: "↗";
 }
-
-
 
 #about p {
 	line-height: 1.2;
@@ -659,18 +655,10 @@ figure>img {
 	font-family: var(--icon-font);
 	font-size: 25px;
 	font-style: normal;
-    position: absolute;
 }
 
-i.icon.blue.deco-1 {
-    top: 748px;
-    right: 70px;
+.deco {
     rotate: 40deg;
-}
-i.icon.blue.deco-2 {
-    top: 748px;
-    left: 75px;
-    rotate: -25deg;
 }
 
 #intro .bullet-list>li, #intro .stack>p {
@@ -811,115 +799,21 @@ p.animation-text {
     
     
 }
-@media (min-width: 700px) {
-    .xl-text {
-        font-size: 5rem;
+@media (min-width: 600px) {
+    #heading-title span {
+        font-size: 4.4rem;
     }
-
-    .list-item a {
-        max-width: 130px;
+    .nav-item, .animation-box, #contact > .list-item:hover .animation-box {
+        height: 105px;
+        width: 120px;
     }
-
-    .headshot-container {
-        padding-bottom: 0px;
-    }
-
-    .headshot-container.xsm {
-        display: none;
-    }
-
-    .headshot-container.medium {
-        display: block;
-    }
-
-    .work-section {
-        padding: 0 0;
-    }
-
-    .stem {
-        width: 20px;
-    }
-
-    .header-name {
-        font-size: 3rem;
-    }
-
     .list-item p {
-        font-size: 1.8rem !important;
-    }
-
-    .work-section .project-img {
-        max-width: 45%;
-    }
-
-    [open] summary {
-        font-size: calc(125%);
-        padding: 0;
-    }
-
-    summary {
-        padding: 5px 25px;
-    }
-
-    .work-section:has(details[open]) {
-        padding: 25px;
-    }
-
-    .header-title > span {
-        font-size: 3rem;
-    }
-
-    #intro {
-        width: unset;
-        justify-self: center;
-    }
-
-    .img-title-container h2 {
-        font-size: 3rem;
-    }
-
-    #intro p {
-        justify-self: center;
-        margin-top: 0;
-    }
-
-    #about a,
-    #projects a {
-        cursor: pointer !important;
-        pointer-events: visible;
-    }
-
-    .tulips {
-		padding: 90px 0;
-	}
-
-    .nav-item {
-        height: 160px;
-        max-height: 160px;
-    }
-
-    .nav-item, .animation-box {
-        border-bottom-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-    }
-
-    figure {
-        background-color: transparent;
-    }
-
-    .details-container {
-        padding: 0;
-    }
-
-    summary .role-header, #intro .role-header, summary a {
-        font-size: 1.5rem;
-        color: black;
-    }
-
-    [open] summary .role-header {
         font-size: 1.5rem;
     }
-}
+
+    .list-item {
+        width: 98px;
+    }
 
 @media (min-width: 900px) {
     .uw-section .details-container {
