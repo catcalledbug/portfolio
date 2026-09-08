@@ -107,6 +107,9 @@ h3 {
     text-align: center; */
 }
 
+.spacer {
+    height: 25px;
+}
 
 /* .deco-grid.xsm {
     display: grid;
@@ -295,7 +298,7 @@ li {
 }
 
 #about {
-	min-height: unset;
+    scroll-margin-top: 100px;
 }
 
 .white-btn {
@@ -451,10 +454,6 @@ summary > .role-header > span a {
 
 .details-container {
     padding: 0 1em;
-}
-
-article {
-	min-height: 50vh;
 }
 
 .bullet-list {
@@ -631,14 +630,16 @@ figure>img {
 	padding-bottom: 25px;
 }
 
-#about,
-#contact,
+#contact {
+
+}
+
 #projects {
-	scroll-margin-top: -50px;
+	scroll-margin-top: 0px;
 }
 
 #experience {
-    scroll-margin-top: 160px;
+    scroll-margin-top: 0px;
 }
 
 .icon {
@@ -898,7 +899,7 @@ summary .role-header {
     }
     
     #experience {
-        scroll-margin-top: 150px;
+        /* scroll-margin-top: 900px; */
     }
 
    
@@ -971,9 +972,7 @@ summary .role-header {
 		padding-top: 100px;
 	}
 
-	#about {
-		scroll-margin-top: -25px;
-	}
+
 
 	#projects,
 	#contact {
