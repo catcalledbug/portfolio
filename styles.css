@@ -168,6 +168,7 @@ span#letter-spacing-flair {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .space-between {
@@ -354,11 +355,6 @@ nav {
     width: 100%;
 }
 
-#contact .intro-outline {
-    background-color: transparent;
-}
-
-
 span.header-name,
 .list-item a {
 	font-size: 2.2rem;
@@ -380,11 +376,23 @@ span.header-name,
 }
 
 #contact .list-item {
-    width: 80px;
+    width: 100px;
 }
 
 #contact .stem {
-    width: 20px;
+    width: 26px;
+}
+
+#contact-stem-inner-extended {
+    position: absolute;
+    height: 450px;
+    top: -50px;
+}
+
+#contact-stem-inner-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 #contact .tulips {
@@ -410,7 +418,7 @@ summary > .role-header > span a {
 
 #about a::after,
 #projects a::after,
-#contact .nav-item p::after {
+#contact a::after {
 	content: " ↗";
 }
 
@@ -597,9 +605,13 @@ h3.role-header span {
 }
 
 .stem {
-    width: 15px;
-	height: 17vh;
+    width: 20px;
+	height: 120px;
     margin-top: -10px;
+}
+
+.contact-outline {
+    outline: none;
 }
 
 .nav-item:hover .animation-box {
@@ -625,19 +637,17 @@ figure>img {
 #contact {
 	display: flex;
 	flex-direction: column;
+    position: relative;
+    z-index: 6;
 }
 
 #contact .nav-item img {
 	border-bottom-right-radius: 25px;
 }
 
-#contact h3 {
-	padding-bottom: 25px;
-}
+/* #contact h3 {
 
-#contact {
-
-}
+} */
 
 #projects {
 	scroll-margin-top: 0px;
@@ -682,11 +692,11 @@ figure>img {
 }
 
 .nav-list .list-item:nth-child(even) .stem {
-    height: calc(17vh + 50px);
+    height: calc(120px + 50px);
 }
 
 #contact .list-item:nth-child(even) .stem {
-	height: calc(17vh + 50px);
+	height: calc(120px + 50px);
 }
 
 #to-top-container a {
@@ -696,6 +706,13 @@ figure>img {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+    cursor: pointer;
+    z-index: 6;
+    position: relative;
+    width: 80px;
+    padding-bottom: 5px;
+    background-color: var(--background-gray);
+    outline: 1px solid black;
 }
 
 .about-me-text>p span {
@@ -716,9 +733,10 @@ figure>img {
 
 #to-top-container {
 	text-align: center;
-	margin-top: -40px;
-	padding-bottom: 50px;
-	padding-top: 50px;
+	margin-top: 150px;
+    display: flex;
+    background-color: var(--background-gray);
+    justify-self: center;
 }
 
 #contact-list-container {
@@ -743,13 +761,9 @@ figure>img {
     width: 75%;
 }
 
-#about .exp-container .work-section {
+#about .exp-container .work-section, #contact .work-section {
     padding: 10px 0;
     border-bottom: 1px solid black;
-}
-
-#contact .work-section {
-	padding: 0 25px;
 }
 
 .animation-text,
@@ -795,6 +809,12 @@ summary .role-header {
     height: 110px;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
+}
+
+/* box-shadow: horizontal | vertical | blur | spread | color */
+
+#contact-stem-extended, #contact-stem-inner-extended {
+    border-bottom: none;
 }
 
 .header-name {
