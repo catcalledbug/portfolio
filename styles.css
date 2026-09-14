@@ -699,6 +699,13 @@ figure>img {
     width: unset;
 }
 
+.contact-socials:hover a,
+.contact-socials:hover .open-arrow
+ {
+    color: blue;
+    cursor: pointer;
+}
+
 #contact .role-header-exp span a {
     padding: 25px;
     display: block;
@@ -729,7 +736,7 @@ figure>img {
 }
 
 #to-top-container a {
-	color: white;
+	color: var(--white);
 	font-size: 1.7rem;
 	scroll-behavior: smooth;
 	display: flex;
@@ -738,12 +745,13 @@ figure>img {
     cursor: pointer;
     z-index: 6;
     position: absolute;
-    width: 150px;
-    padding-bottom: 10px;
-    background-color: var(--red);
+    width: 200px;
+    padding-bottom: 5px;
+    background-color: var(--selection-red);
     outline: 1px solid black;
     box-shadow: 2px 2px 7px black;
     bottom: 0;
+    height: 80px;
 }
 
 .about-me-text>p span {
@@ -760,7 +768,7 @@ figure>img {
 
 #to-top-container a:hover,
 #to-top-container a:hover p {
-	color: var(--yellow);
+	color: var(--blue);
 }
 
 #to-top-container {
