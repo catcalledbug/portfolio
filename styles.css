@@ -215,7 +215,7 @@ figure.sm {
 }
 
 #heading-title span {
-    font-size: 3rem;
+    font-size: 3.4rem;
 }
 
 #time:before {
@@ -353,6 +353,7 @@ nav {
     position: relative;
     z-index: 3;
     width: 100%;
+    max-width: 400px;
 }
 
 span.header-name,
@@ -674,7 +675,7 @@ figure>img {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	padding: 35% 0;
+	padding: 125px 0;
     width: 100%;
 }
 
@@ -704,6 +705,10 @@ figure>img {
  {
     color: blue;
     cursor: pointer;
+}
+
+.contact-socials:hover {
+    background-color: var(--white);
 }
 
 #contact .role-header-exp span a {
@@ -736,7 +741,7 @@ figure>img {
 }
 
 #to-top-container a {
-	color: var(--white);
+	color: var(--dark-gray);
 	font-size: 1.7rem;
 	scroll-behavior: smooth;
 	display: flex;
@@ -747,7 +752,7 @@ figure>img {
     position: absolute;
     width: 200px;
     padding-bottom: 5px;
-    background-color: var(--selection-red);
+    background-color: var(--white);
     outline: 1px solid black;
     box-shadow: 2px 2px 7px black;
     bottom: 0;
@@ -761,9 +766,8 @@ figure>img {
 
 #to-top-container a>p {
 	font-size: .7rem;
-	color: var(--dark-gray);
 	margin: 0;
-    color: white;
+    color: black;
 }
 
 #to-top-container a:hover,
@@ -856,8 +860,6 @@ summary .role-header {
     border-top: 1px solid black;
 }
 
-/* box-shadow: horizontal | vertical | blur | spread | color */
-
 #contact-stem-extended, #contact-stem-inner-extended {
     border-bottom: none;
 }
@@ -867,27 +869,39 @@ summary .role-header {
 }
 
 @media (min-width: 600px) {
-    #intro, #experience, #projects {
-        justify-self: center;
-    }
-
     #heading-title span {
-        font-size: 4rem;
-    }
-
-    .nav-item, .animation-box, #contact > .list-item:hover .animation-box {
-        height: 100px;
+        font-size: 5rem;
     }
 
     .list-item {
-        width: 90px;
+        width: 120px;
     }
 
-    .list-item a, #contact .list-item a {
-        width: 130px;
+    .list-item a, #contact .list-item a, .list-item:hover .animation-box, .animation-box {
+        width: 150px;
+    }
+
+    .list-item p {
+        font-size: 1.5rem;
+    }
+   
+    .nav-item, .nav-item:hover .animation-box {
+        height: 150px;
     }
 
     .stem {
-        width: 20px;
+        width: 25px;
+    }
+
+    .mini-text {
+        font-size: .7rem;
+    }
+
+    span.header-name, .list-item a {
+        font-size: 3rem;
+    }
+
+    @media (min-width: 900px) {
+        
     }
 }
