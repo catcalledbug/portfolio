@@ -64,8 +64,7 @@ html {
 }
 
 body {
-	padding-left: 10px;
-    padding-right: 10px;
+	padding: 0 10px;
 	margin: 0;
 	font-family: var(--sans-book);
 	overflow-x: hidden;
@@ -874,11 +873,11 @@ summary .role-header {
     }
 
     .list-item {
-        width: 120px;
+        width: 100px;
     }
 
-    .list-item a, #contact .list-item a, .list-item:hover .animation-box, .animation-box {
-        width: 150px;
+    .list-item a, .list-item:hover .animation-box, .animation-box {
+        width: 125px;
     }
 
     .list-item p {
@@ -886,11 +885,16 @@ summary .role-header {
     }
    
     .nav-item, .nav-item:hover .animation-box {
-        height: 150px;
+        height: 110px;
     }
 
     .stem {
-        width: 25px;
+        width: 23px;
+        height: 150px;
+    }
+
+    .nav-list .list-item:nth-child(even) .stem {
+        height: calc(150px + 50px);
     }
 
     .mini-text {
@@ -901,7 +905,98 @@ summary .role-header {
         font-size: 3rem;
     }
 
-    @media (min-width: 900px) {
-        
+    .tulips {
+        padding: 100px 0;
     }
+
+@media (min-width: 900px) {
+    #heading-title span {
+        font-size: 6rem;
+    }
+
+    span.header-name, .list-item a {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    #heading-title span {
+        font-size: 7rem;
+    }
+
+    .tulips {
+        padding: 60px 0;
+    }
+    
+    span.header-name, .list-item a {
+        font-size: 4rem;
+    }
+
+    .list-item a, .list-item:hover .animation-box, .animation-box {
+        width: 170px;
+    }
+
+    .nav-item, .nav-item:hover .animation-box {
+        height: 155px;
+    }
+
+    .stem {
+        width: 30px;
+        height: 180px;
+    }
+
+    .nav-list .list-item:nth-child(even) .stem {
+        height: calc(180px + 50px);
+    }
+
+    .nav-item, .animation-box, .nav-item:hover .animation-box {
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+
+    .list-item {
+        width: 150px;
+    }
+}
+
+@media (min-width: 1450px) {
+    body {
+        padding: 0 25px;
+    }
+    
+    #heading-title span {
+        font-size: 7rem;
+    }
+
+    .tulips {
+        padding: 110px 0;
+    }
+
+    .nav-item, .animation-box, .nav-item:hover .animation-box {
+        border-bottom-right-radius: 125px;
+        border-bottom-left-radius: 125px;
+    }
+
+    .list-item a, .list-item:hover .animation-box, .animation-box {
+        width: 175px;
+    }
+
+    .nav-item, .nav-item:hover .animation-box {
+        height: 170px;
+    }
+
+    .list-item {
+        width: 150px;
+    }
+
+    .stem {
+        width: 32px;
+        height: 180px;
+    }
+
+    .nav-list .list-item:nth-child(even) .stem {
+        height: calc(180px + 50px);
+    }
+}
+
 }
