@@ -604,7 +604,7 @@ h3.role-header span {
 .stem, .stem-extended {
 	background-color: var(--green);
 	z-index: 1;
-	box-shadow: 2px 2px 7px #2f3517;
+    box-shadow: 2px 3px 8px 1px #2f3517;
 }
 
 .stem {
@@ -967,23 +967,25 @@ summary .role-header {
     .lg-grid {
         display: grid;
         grid-template-columns: 1fr 150px 1fr;
-        grid-template-rows: repeat(6, auto);
+        grid-template-rows: repeat(7, auto);
         width: 100%;
-        place-content: center; 
         place-items: center;
-        gap: 25px;
+        gap: 50px;
         overflow: hidden;
+        align-items: start;
     }
 
     .lg-grid section > section {
-        width: 400px;
+        width: 450px;
         outline: 1px solid black;
         padding: 25px;
-        background-color: var(--background-gray);
+        background-color: var(--white);
     }
 
     .intro-outline {
-        min-height: 400px;
+        min-height: 600px;
+        max-width: 450px;
+        background-color: var(--white);
     }
 
     #small-view-layout {
@@ -1001,7 +1003,7 @@ summary .role-header {
     .headshot-img-grid {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
-        z-index: 5;
+        z-index: 8;
         height: 100%;
         min-width: 300px;
     }
@@ -1055,7 +1057,7 @@ summary .role-header {
     .grid-contact-section {
         grid-column: 2 / 3;
         grid-row: 5 / 6;
-        z-index: 4;
+        z-index: 7;
     }
 
     .stem-grid-1 {
@@ -1063,22 +1065,32 @@ summary .role-header {
         grid-column: 2 / 3;
         height: 100%;
         margin-top: 100px;
+        z-index: 7;
     }
 
     .grid-to-top {
         grid-column: 1 / 4;
-        grid-row: 6 / 7;
+        grid-row: 7 / 8;
         width: 100%;
-        height: 100%;
+        height: 150px;
         place-content: end;
         padding-bottom: 15px;
+        z-index: 7;
     }
 
     .to-top-container {
         width: 100%;
+        background-color: transparent;
+        height: 100%;
     }
 
-    [class*="stem-grid-"] > .stem-extended {
+    .to-top-container a {
+        width: 800px;
+        cursor: pointer;
+        height: 100%;
+    }
+
+    .lg-grid .stem-extended {
         height: 100%;
         z-index: 1;
         width: 50px;
@@ -1086,30 +1098,139 @@ summary .role-header {
         border-top: none;
         border-bottom: none;
         margin-top: 50px;
+        z-index: 7;
     }
 
-    .to-top-container a {
-        width: 800px;
-        cursor: pointer;
-        height: 125px;
-    }
 
-    #projects a {
+    #projects a,  
+    .role-header.lg-text span a,
+    .bullet-list li a {
         border-bottom: 1px solid black;
     }
 
     #projects {
         align-self: start;
+        z-index: 8;
     }
 
-    #projects a:hover {
+    #projects a:hover,  
+    .role-header.lg-text span a:hover,
+    .bullet-list li a:hover {
         background-color: var(--selection-red);
         color: #fff !important;
     }
 
-    #projects a::after {
+    #projects a::after,
+    .role-header.lg-text span a::after,
+    .bullet-list li a::after {
 	    content: " ↗";
     }
+
+    .leaf {
+        width: 131px;
+        height: 270px;
+        background-color: var(--green);
+        /* clip-path: polygon(50% 0%, 75% 25%, 80% 60%, 60% 100%, 40% 100%, 20% 60%, 25% 25%); */
+        clip-path: polygon(50% 0%, 65% 12%, 75% 25%, 79% 42%, 80% 60%, 73% 82%, 60% 100%, 40% 100%, 27% 82%, 20% 60%, 21% 42%, 25% 25%, 35% 12%);
+        z-index: 6;
+        position: absolute;
+    }
+
+    /* box-shadow: 2px 3px 6px 1px #2f3517; */
+
+    .leaf-container-1 {
+        grid-row: 2 / 3;
+    }
+
+    .leaf-container-2 {
+        grid-row: 3 / 4;
+    }
+
+    .leaf-1 {
+        rotate: 70deg;
+        margin-left: 78px;
+        top: 25px;
+    }
+
+    .leaf-2 {
+        rotate: -70deg;
+        margin-left: -204px;
+        top: -224px;
+    }
+
+    .leaf-3 {
+        rotate: 70deg;
+        margin-left: 78px;
+        top: -224px;
+    }
+
+    .leaf-4 {
+        margin-left: -204px;
+        rotate: -70deg;
+        top: 860px;
+    }
+   
+    .leaf-5 {
+        margin-left: 78px;
+        rotate: 70deg;
+        top: 860px;
+    }
+
+    .leaf-6 {
+        margin-left: -204px;
+        rotate: -70deg;
+        top: 25px;
+    }
+
+    .leaf-7 {
+        margin-left: 78px;
+        rotate: 70deg;
+        top: 358px;
+    }
+
+    .leaf-8 {
+        margin-left: -204px;
+        rotate: -70deg;
+        top: 358px;
+    }
+
+    .leaf-container {
+        grid-column: 2 / 3;
+        position: relative;
+        overflow: visible;
+        z-index: 6;
+        filter: drop-shadow(1px 5px 6px rgba(0, 0, 0, 0.5));
+        align-self: center;
+    }
+
+    .role-header span:first-child {
+        color: var(--blue);
+        font-size: 2rem; 
+        font-weight: 900;
+    }
+
+    .role-header span a {
+        font-size: 1rem;
+    }
+
+    .role-header { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+
+    .role-header.stack {
+        color: var(--blue);
+        font-size: 2rem; 
+        font-weight: 900;
+        margin-left: -25px;
+    }
+
+    .details-container {
+        padding: 0 25px;
+    }
+
 
     /*  */
 

@@ -321,7 +321,7 @@
         <img class="headshot-image" width="200" src="/assets/imgs/headshot.JPG" height="200" alt="Black and white headshot image of Taylor Jackson"/>
     </section>
     <section class="grid-about-section flex-wrapper-col"> 
-        <div class="intro-outline">
+        <section class="intro-outline">
             <span class="header-title">Ab<span class="flair-letter">o</span>ut Me</span>  
             <p>
                 I am a front-end web developer specializing in <span class="specializations">fast, accessible, and responsive</span> web applications. I write clean JavaScript and TypeScript to build web experiences optimized for performance and cross-browser consistency.
@@ -331,11 +331,11 @@
                 <br><br>
             </p>
             <p><span>Technologies I commonly use:</span> React, JavaScript (ES6+), TypeScript, HTML5, CSS3/SCSS</p>
-        </div>
+        </section>
     </section>
 
     <section id="experience" class="grid-work-section exp-container flex-wrapper-col">
-        <div class="intro-outline">
+        <section class="intro-outline">
             <span class="header-title"><span id="letter-spacing-flair">W</span><span class="flair-letter">o</span>rk Experience</span>
             <div class="work-section">
                 <div class="flex-wrapper space-between">
@@ -367,9 +367,15 @@
                     <span>2015-2019</span>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
-
+    <div class="leaf-container leaf-container-1">
+        <div class="leaf leaf-1"></div>
+        <div class="leaf leaf-6"></div>
+    </div>
+    <!-- <div class="leaf-container leaf-container-1">
+        <div class="leaf leaf-6"></div>
+    </div> -->
     <div class="stem-grid-1">
         <div class="stem-extended"></div>
     </div>
@@ -380,6 +386,14 @@
         </section>
     </section>
 
+    <div class="leaf-container leaf-container-2">
+        <div class="leaf leaf-2"></div>
+        <div class="leaf leaf-3"></div>
+        <div class="leaf leaf-4"></div>
+        <div class="leaf leaf-5"></div>
+        <div class="leaf leaf-7"></div>
+        <div class="leaf leaf-8"></div>
+    </div>
 
     <section class="grid-tt-section">
         <section>
@@ -391,6 +405,9 @@
             </h3>
             <div class="details-container">
                 <div class="info-container">
+                    <p>Task Tracker is a to-do list application where its users can write tasks, have them sorted into categories based 
+                        on the task's due date, then edit, delete, or complete them. The tasks are save on each user's individual browser.
+                    </p>
                     <ul class="bullet-list">
                         <li>developed a responsive React application using modular components and hooks to perform persistent CRUD operations</li>
                         <li>integrated Moment.js to manage task deadlines and calendar formatting for client-side date logic</li>
@@ -400,7 +417,7 @@
                     <br>
                     <span class="role-header stack">Technologies + Tools</span>
                     <ul class="bullet-list">
-                        <li>CSS, JavaScript, React</li>
+                        <li>React, JavaScript, CSS</li>
                         <li>localStorage/Web Storage API</li>
                         <li>Moment.js</li>
                         <li><a target="_blank" href="https://github.com/catcalledbug/todo-list-react/tree/main/todo-list">Link to Github repo</a></li>
@@ -409,8 +426,7 @@
             </div>
             <div class="figure-container">
                 <figure>
-                    <img class="project-img sm" loading="lazy" src="/assets/imgs/todo-iphone-crop.png" alt="Rendering of Task Tracker app on iPhone">
-                    <img class="project-img lg" loading="lazy" src="/assets/imgs/todo-iphone-full.png" alt="Rendering of Task Tracker app on iPhone">
+                    <img class="project-img" loading="lazy" src="/assets/imgs/todo-iphone-full.png" alt="Rendering of Task Tracker app on iPhone">
                 </figure>
             </div>
         </section>
@@ -420,7 +436,7 @@
     <section class="grid-gac-section">
         <section>
             <h3 class="role-header lg-text">
-                <span>Grab A Cone Website</span>
+                <span>Grab A Cone</span>
                 <span>
                     <a target="_blank" href="https://grabacone.netlify.app/">View Live Site</a>
                 </span>
@@ -444,8 +460,7 @@
             </div>
             <div class="figure-container">
                 <figure>
-                    <img class="project-img sm" loading="lazy" src="/assets/imgs/grabacone-iphone-crop.png" alt="Rendering of Grab A Cone website on an iPhone">
-                    <img class="project-img lg" loading="lazy" src="/assets/imgs/grabacone-iphone-full.png" alt="Rendering of Grab A Cone website on an iPhone">
+                    <img class="project-img" loading="lazy" src="/assets/imgs/grabacone-iphone-full.png" alt="Rendering of Grab A Cone website on an iPhone">
                 </figure>
             </div>
         </section>
@@ -481,8 +496,7 @@
             </div>
             <div class="figure-container">
                 <figure>
-                    <img class="project-img sm" loading="lazy" src="/assets/imgs/bogbot-iphone-crop.png" alt="Screenshot of BogBot application in Discord">
-                    <img class="project-img lg" loading="lazy" src="/assets/imgs/bogbot-iphone-full.png" alt="Screenshot of BogBot application in Discord">
+                    <img class="project-img" loading="lazy" src="/assets/imgs/bogbot-iphone-full.png" alt="Screenshot of BogBot application in Discord">
                 </figure>
             </div>
         </section>
@@ -517,8 +531,7 @@
             </div>
             <div class="figure-container">
                 <figure>
-                    <img class="project-img sm" loading="lazy" src="/assets/imgs/todo-iphone-crop.png" alt="Rendering of Task Tracker app on iPhone">
-                    <img class="project-img lg" loading="lazy" src="/assets/imgs/todo-iphone-full.png" alt="Rendering of Task Tracker app on iPhone">
+                    <img class="project-img" loading="lazy" src="/assets/imgs/todo-iphone-full.png" alt="Rendering of Task Tracker app on iPhone">
                 </figure>
             </div>
         </section>
