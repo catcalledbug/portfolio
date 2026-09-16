@@ -95,11 +95,12 @@
             </section>
         </article>
         <div class="spacer"></div>
+    <div id="small-view-layout">
         <article id="about" class="flex-wrapper-col">
              <div id="intro">
                 <div class="intro-wrapper">
                     <div class="headshot-container">
-                        <img width="200" src="/assets/imgs/headshot.JPG" height="200" alt="Black and white headshot image of Taylor Jackson"/>
+                        <img class="headshot-image" width="200" src="/assets/imgs/headshot.JPG" height="200" alt="Black and white headshot image of Taylor Jackson"/>
                     </div>
                     <div class="stem-container">
                         <div class="stem"></div>
@@ -114,14 +115,6 @@
                             My experience spans building applications from scratch and working within established codebases using Vue, React, and Angular.
                             <br><br>
                         </p>
-                        <!-- <i class="icon blue deco">)ZXY</i> -->
-                        <!-- <span class="role-header stack">Technologies + Tools</span>
-                        <ul class="bullet-list">
-                            <li>Core Development: JavaScript (ES6+), TypeScript, HTML5, CSS3/SCSS</li>
-                            <li>Frameworks & Libraries: React, Vue.js, Angular</li>
-                            <li>Backend: Node.js, AWS</li>
-                            <li>Workflow: Git, Responsive Design, Web Accessibility (WCAG)</li>
-                        </ul> -->
                         <p><span>Technologies I commonly use:</span> React, JavaScript (ES6+), TypeScript, HTML5, CSS3/SCSS</p>
                         </div>
                         </section>
@@ -314,11 +307,275 @@
                 <div id="contact-stem-inner-extended" class="stem-extended"></div>
             </section>
         </article>
-        <div id="to-top-container">
-            <a id="to-top-btn" href="index.html#title" class="icon">+
+        <div class="to-top-container">
+            <a class="to-top-btn icon" href="index.html#title">+
                 <p>back to top</p>
             </a>
         </div>
+    </div>
+
+<!-- TESTING LARGE LAYOUT CHANGES -->
+
+<article class="lg-grid">
+    <section class="headshot-img-grid">
+        <img class="headshot-image" width="200" src="/assets/imgs/headshot.JPG" height="200" alt="Black and white headshot image of Taylor Jackson"/>
+    </section>
+    <section class="grid-about-section flex-wrapper-col"> 
+        <div class="intro-outline">
+            <span class="header-title">Ab<span class="flair-letter">o</span>ut Me</span>  
+            <p>
+                I am a front-end web developer specializing in <span class="specializations">fast, accessible, and responsive</span> web applications. I write clean JavaScript and TypeScript to build web experiences optimized for performance and cross-browser consistency.
+                <br><br>
+                In every project, I prioritize <span class="specializations">semantic HTML, modern CSS layouts, and web accessibility standards.</span>
+                My experience spans building applications from scratch and working within established codebases using Vue, React, and Angular.
+                <br><br>
+            </p>
+            <p><span>Technologies I commonly use:</span> React, JavaScript (ES6+), TypeScript, HTML5, CSS3/SCSS</p>
+        </div>
+    </section>
+
+    <section id="experience" class="grid-work-section exp-container flex-wrapper-col">
+        <div class="intro-outline">
+            <span class="header-title"><span id="letter-spacing-flair">W</span><span class="flair-letter">o</span>rk Experience</span>
+            <div class="work-section">
+                <div class="flex-wrapper space-between">
+                    <h3 class="role-header-exp">
+                        <span>Junior Web Developer</span>
+                        <br>
+                        <span>@ Epistemic Analytics</span>
+                    </h3>
+                    <span>2017-2019</span>
+                </div>
+            </div>
+            <div class="work-section">
+                <div class="flex-wrapper space-between">
+                    <h3 class="role-header-exp">
+                        <span>Undergraduate Research Assistant</span>
+                        <br>
+                        <span>@ People and Robots Laboratory</span>
+                    </h3>
+                    <span>2017-2018</span>
+                </div>
+            </div>
+            <div class="work-section">
+                <div class="flex-wrapper space-between">
+                    <h3 class="role-header-exp">
+                        <span>B.S. in Computer Science</span>
+                        <br>
+                        <span>@ UW-Madison</span>
+                    </h3>
+                    <span>2015-2019</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stem-grid-1">
+        <div class="stem-extended"></div>
+    </div>
+
+    <section id="projects" class="grid-projects-section">
+        <section class="intro-outline">
+            <span class="header-title">Selected Pr<span class="flair-letter">o</span>jects</span>
+        </section>
+    </section>
+
+
+    <section class="grid-tt-section">
+        <section>
+            <h3 class="role-header lg-text">
+                <span>Task Tracker</span>
+                <span>
+                    <a target="_blank" href="https://thingsihavetodo.netlify.app/">View Live Site</a>
+                </span>
+            </h3>
+            <div class="details-container">
+                <div class="info-container">
+                    <ul class="bullet-list">
+                        <li>developed a responsive React application using modular components and hooks to perform persistent CRUD operations</li>
+                        <li>integrated Moment.js to manage task deadlines and calendar formatting for client-side date logic</li>
+                        <li>stored and retrieved task data directly on the user's device using localStorage</li>
+                        <li>built UIs ensuring cross-browser consistency and WCAG compliance through WAVE validation</li>
+                    </ul>   
+                    <br>
+                    <span class="role-header stack">Technologies + Tools</span>
+                    <ul class="bullet-list">
+                        <li>CSS, JavaScript, React</li>
+                        <li>localStorage/Web Storage API</li>
+                        <li>Moment.js</li>
+                        <li><a target="_blank" href="https://github.com/catcalledbug/todo-list-react/tree/main/todo-list">Link to Github repo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="figure-container">
+                <figure>
+                    <img class="project-img sm" loading="lazy" src="/assets/imgs/todo-iphone-crop.png" alt="Rendering of Task Tracker app on iPhone">
+                    <img class="project-img lg" loading="lazy" src="/assets/imgs/todo-iphone-full.png" alt="Rendering of Task Tracker app on iPhone">
+                </figure>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="grid-gac-section">
+        <section>
+            <h3 class="role-header lg-text">
+                <span>Grab A Cone Website</span>
+                <span>
+                    <a target="_blank" href="https://grabacone.netlify.app/">View Live Site</a>
+                </span>
+            </h3>
+            <div class="details-container">
+                <div class="info-container">
+                    <ul class="bullet-list">
+                        <li>developed a responsive, mobile-first business concept website using Vue.js for modular, reusable UI components</li>
+                        <li>used the Fetch API to retrieve and parse product data stored in an Amazon S3 bucket</li>
+                        <li>built UIs ensuring cross-browser compatibility and WCAG compliance through WAVE validation</li>
+                        <li>optimized web page metadata and title tags to maximize search engine visibility (SEO) and improve organic click-through rates (CTR)</li>
+                    </ul>   
+                    <br>
+                    <span class="role-header stack">Technologies + Tools</span>
+                    <ul class="bullet-list">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Vue.js</li>
+                        <li><a target="_blank" href="https://github.com/catcalledbug/grabacone">Link to Github repo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="figure-container">
+                <figure>
+                    <img class="project-img sm" loading="lazy" src="/assets/imgs/grabacone-iphone-crop.png" alt="Rendering of Grab A Cone website on an iPhone">
+                    <img class="project-img lg" loading="lazy" src="/assets/imgs/grabacone-iphone-full.png" alt="Rendering of Grab A Cone website on an iPhone">
+                </figure>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="grid-bb-section">
+        <section>
+            <h3 class="role-header lg-text">
+                <span>BogBot</span>
+                <span>
+                    <a target="_blank" href="https://discord.com/oauth2/authorize?client_id=1228082480322445404">
+                        Invite to your Discord server
+                    </a>
+                </span>
+            </h3>
+            <div class="details-container">
+                <div class="info-container">
+                    <ul class="bullet-list">
+                        <li>built and deployed a live Discord bot using Node.js to stream real-time voice channel audio for active server communities</li>
+                        <li>wrote JavaScript timing logic to synchronize user notifications with MP3 audio playback via Discord Slash Commands</li>
+                        <li>configured and managed an Amazon EC2 instance for continuous hosting</li>   
+                    </ul>   
+                    <br>
+                    <span class="role-header stack">Technologies + Tools</span>
+                    <ul class="bullet-list">
+                        <li>JavaScript, Node.js</li>
+                        <li>Discord API</li>
+                        <li>Amazon EC2</li>
+                        <li><a target="_blank" href="https://github.com/catcalledbug/bogbot">Link to Github repo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="figure-container">
+                <figure>
+                    <img class="project-img sm" loading="lazy" src="/assets/imgs/bogbot-iphone-crop.png" alt="Screenshot of BogBot application in Discord">
+                    <img class="project-img lg" loading="lazy" src="/assets/imgs/bogbot-iphone-full.png" alt="Screenshot of BogBot application in Discord">
+                </figure>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="grid-cookbook-section">
+        <section>
+            <h3 class="role-header lg-text">
+                <span>Task Tracker</span>
+                <span>
+                    <a target="_blank" href="https://thingsihavetodo.netlify.app/">View Live Site</a>
+                </span>
+            </h3>
+            <div class="details-container">
+                <div class="info-container">
+                    <ul class="bullet-list">
+                        <li>developed a responsive React application using modular components and hooks to perform persistent CRUD operations</li>
+                        <li>integrated Moment.js to manage task deadlines and calendar formatting for client-side date logic</li>
+                        <li>stored and retrieved task data directly on the user's device using localStorage</li>
+                        <li>built UIs ensuring cross-browser consistency and WCAG compliance through WAVE validation</li>
+                    </ul>   
+                    <br>
+                    <span class="role-header stack">Technologies + Tools</span>
+                    <ul class="bullet-list">
+                        <li>CSS, JavaScript, React</li>
+                        <li>localStorage/Web Storage API</li>
+                        <li>Moment.js</li>
+                        <li><a target="_blank" href="https://github.com/catcalledbug/todo-list-react/tree/main/todo-list">Link to Github repo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="figure-container">
+                <figure>
+                    <img class="project-img sm" loading="lazy" src="/assets/imgs/todo-iphone-crop.png" alt="Rendering of Task Tracker app on iPhone">
+                    <img class="project-img lg" loading="lazy" src="/assets/imgs/todo-iphone-full.png" alt="Rendering of Task Tracker app on iPhone">
+                </figure>
+            </div>
+        </section>
+    </section>
+
+    
+    <section class="grid-contact-section">
+        <section id="contact" class="flex-wrapper-col">
+            <div>
+                <span class="header-title"><span id="letter-spacing-flair">C</span><span class="flair-letter">o</span>ntact Me</span>
+                <div class="work-section">
+                    <div class="flex-wrapper space-between contact-socials">
+                        <h3 class="role-header-exp">
+                            <span>
+                                <a href="https://www.linkedin.com/in/taylorjacksonuw/" target="_blank">LinkedIn</a>
+                            </span>
+                        </h3>
+                        <a class="open-arrow" href="https://www.linkedin.com/in/taylorjacksonuw/" target="_blank">↗</a>
+                    </div>
+                </div>
+                <div class="work-section">
+                    <div class="flex-wrapper space-between contact-socials">
+                        <h3 class="role-header-exp">
+                            <span>
+                                <a href="mailto:taylorjackson3434@gmail.com" target="_blank">Email</a>
+                            </span>
+                        </h3>
+                        <a class="open-arrow" href="mailto:taylorjackson3434@gmail.com" target="_blank">↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="grid-to-top">
+        <div class="to-top-container">
+            <a class="to-top-btn icon" href="index.html#title" class="icon">+
+                <p>back to top</p>
+            </a>
+        </div>
+    </section>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- TESTING LARGE LAYOUT CHANGES -->
+
+       
     </main>
     <script src="script.js"></script>
 </body>

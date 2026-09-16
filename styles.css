@@ -106,6 +106,10 @@ main {
     height: 50px;
 }
 
+.lg-grid {
+    display: none;
+}
+
 /* .deco-grid.xsm {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
@@ -139,7 +143,7 @@ span#letter-spacing-flair {
     letter-spacing: -5px;
 }
 
-#intro img {
+.headshot-image {
     max-width: 265px;
     border-bottom-right-radius: 125px;
 	border-bottom-left-radius: 125px;
@@ -739,7 +743,7 @@ figure>img {
 	height: calc(120px + 50px);
 }
 
-#to-top-container a {
+.to-top-container a {
 	color: var(--dark-gray);
 	font-size: 1.7rem;
 	scroll-behavior: smooth;
@@ -763,18 +767,18 @@ figure>img {
     font-family: var(--sans-med);
 }
 
-#to-top-container a>p {
+.to-top-container a>p {
 	font-size: .7rem;
 	margin: 0;
     color: black;
 }
 
-#to-top-container a:hover,
-#to-top-container a:hover p {
+.to-top-container a:hover,
+.to-top-container a:hover p {
 	color: var(--blue);
 }
 
-#to-top-container {
+.to-top-container {
 	text-align: center;
 	/* margin-top: 90px; */
     display: flex;
@@ -809,7 +813,7 @@ figure>img {
     width: 75%;
 }
 
-#about .exp-container .work-section {
+.exp-container .work-section {
     padding: 10px 0;
     border-bottom: 1px solid black;
 }
@@ -908,7 +912,7 @@ summary .role-header {
     .tulips {
         padding: 100px 0;
     }
-
+}
 @media (min-width: 900px) {
     #heading-title span {
         font-size: 6rem;
@@ -957,6 +961,158 @@ summary .role-header {
     .list-item {
         width: 150px;
     }
+
+/* Testing Grid Large Layout */
+
+    .lg-grid {
+        display: grid;
+        grid-template-columns: 1fr 150px 1fr;
+        grid-template-rows: repeat(6, auto);
+        width: 100%;
+        place-content: center; 
+        place-items: center;
+        gap: 25px;
+        overflow: hidden;
+    }
+
+    .lg-grid section > section {
+        width: 400px;
+        outline: 1px solid black;
+        padding: 25px;
+        background-color: var(--background-gray);
+    }
+
+    .intro-outline {
+        min-height: 400px;
+    }
+
+    #small-view-layout {
+        display: none;
+    }
+
+    .headshot-image {
+        max-width: 300px;
+        height: 300px;
+        border-bottom-right-radius: 200px;
+        border-bottom-left-radius: 200px;
+        justify-self: center;
+    }
+
+    .headshot-img-grid {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        z-index: 5;
+        height: 100%;
+        min-width: 300px;
+    }
+
+    .grid-about-section {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .grid-work-section {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+
+    .grid-projects-section {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        z-index: 4;
+    }
+
+    .lg-grid #projects > section {
+        height: 100px;
+        min-height: 100px;
+        width: 300px;
+    }
+   
+    .lg-grid #projects .header-title {
+        text-align: center;
+    }
+
+    .grid-tt-section {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    .grid-gac-section {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+    }
+
+    .grid-bb-section {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .grid-cookbook-section {
+        grid-column: 3 / 4;
+        grid-row: 4 / 5;
+    }
+
+    .grid-contact-section {
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+        z-index: 4;
+    }
+
+    .stem-grid-1 {
+        grid-row: 2 / 6;
+        grid-column: 2 / 3;
+        height: 100%;
+        margin-top: 100px;
+    }
+
+    .grid-to-top {
+        grid-column: 1 / 4;
+        grid-row: 6 / 7;
+        width: 100%;
+        height: 100%;
+        place-content: end;
+        padding-bottom: 15px;
+    }
+
+    .to-top-container {
+        width: 100%;
+    }
+
+    [class*="stem-grid-"] > .stem-extended {
+        height: 100%;
+        z-index: 1;
+        width: 50px;
+        position: relative;
+        border-top: none;
+        border-bottom: none;
+        margin-top: 50px;
+    }
+
+    .to-top-container a {
+        width: 800px;
+        cursor: pointer;
+        height: 125px;
+    }
+
+    #projects a {
+        border-bottom: 1px solid black;
+    }
+
+    #projects {
+        align-self: start;
+    }
+
+    #projects a:hover {
+        background-color: var(--selection-red);
+        color: #fff !important;
+    }
+
+    #projects a::after {
+	    content: " ↗";
+    }
+
+    /*  */
+
 }
 
 @media (min-width: 1450px) {
@@ -997,6 +1153,4 @@ summary .role-header {
     .nav-list .list-item:nth-child(even) .stem {
         height: calc(180px + 50px);
     }
-}
-
 }
