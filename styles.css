@@ -151,8 +151,8 @@ span#letter-spacing-flair {
     object-fit: cover;
     min-height: 200px;
     outline: 1px solid var(--dark-gray);
-    box-shadow: 2px 2px 7px black;
-    z-index: 2;
+    box-shadow: 4px 10px 12px -4px black;
+    z-index: 9;
 }
 
 .flair-letter {
@@ -302,25 +302,25 @@ li {
 .white-btn {
 	background-color: var(--white);
     color: black !important;
-    box-shadow: 2px 4px 5px #828283;
+    box-shadow: 4px 10px 12px -4px #828283;
 }
 
 .purple-btn {
     background-color: var(--purple);
     color: black !important;
-    box-shadow: 2px 4px 5px rgb(117, 90, 151);
+    box-shadow: 4px 10px 12px -4px rgb(117, 90, 151);
 }
 
 .blue-btn {
 	background-color: var(--blue);
 	color: white !important;
-	box-shadow: 2px 4px 5px #202a62;
+	box-shadow: 4px 10px 12px -4px #202a62;
 }
 
 .red-btn {
 	background-color: var(--red);
 	color: white !important;
-	box-shadow: 2px 4px 5px #681d22;
+	box-shadow: 4px 10px 12px -4px #681d22;
 }
 
 .green-btn {
@@ -330,7 +330,7 @@ li {
 
 .yellow-btn {
 	background-color: var(--yellow);
-	box-shadow: 2px 4px 5px #a1771e;
+	box-shadow: 4px 10px 12px -4px #a1771e;
 	color: black !important;
 }
 
@@ -385,6 +385,43 @@ span.header-name,
 
 #contact .stem {
     width: 26px;
+}
+
+.leaf-mini {
+    width: 25px;
+    height: 50px;
+    background-color: var(--green);
+    clip-path: polygon(50% 0%, 65% 12%, 75% 25%, 79% 42%, 80% 60%, 73% 82%, 60% 100%, 40% 100%, 27% 82%, 20% 60%, 21% 42%, 25% 25%, 35% 12%);
+    z-index: 6;
+    position: absolute;
+}
+
+.leaf-container-mini {
+    overflow: visible;
+    filter: drop-shadow(1px 5px 6px rgba(0, 0, 0, 0.5));
+    align-self: center;
+    z-index: 0;
+    position: relative;
+}
+
+.leaf-mini-1 {
+    rotate: 66deg;
+    top: -115px;
+    left: 10px;
+}
+
+.leaf-mini-2 {
+    rotate: -66deg;
+    top: -115px;
+    right: 30px;
+}
+
+.group-mini-1 {
+    top: 50px;
+}
+
+.group-mini-2 {
+    top: 115px;
 }
 
 #contact-stem-inner-extended {
@@ -466,7 +503,7 @@ summary > .role-header > span a {
 }
 
 .details-container {
-    padding: 0 1em;
+    padding: 0 25px;
 }
 
 .bullet-list {
@@ -599,6 +636,8 @@ h3.role-header span {
 .stem-container {
 	display: flex;
 	justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 
 .stem, .stem-extended {
@@ -647,10 +686,6 @@ figure>img {
 #contact .nav-item img {
 	border-bottom-right-radius: 25px;
 }
-
-/* #contact h3 {
-
-} */
 
 #projects {
 	scroll-margin-top: 0px;
@@ -811,11 +846,6 @@ figure>img {
 .role-header-exp {
     font-size: 1rem;
     width: 75%;
-}
-
-.exp-container .work-section {
-    padding: 10px 0;
-    border-bottom: 1px solid black;
 }
 
 .animation-text,
@@ -1003,7 +1033,7 @@ summary .role-header {
     .headshot-img-grid {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
-        z-index: 8;
+        z-index: 20;
         height: 100%;
         min-width: 300px;
     }
@@ -1016,6 +1046,11 @@ summary .role-header {
     .grid-work-section {
         grid-column: 3 / 4;
         grid-row: 2 / 3;
+    }
+
+    .exp-container .work-section {
+        border-bottom: 1px solid black;
+        padding: 10px 0;
     }
 
     .grid-projects-section {
@@ -1203,10 +1238,42 @@ summary .role-header {
         align-self: center;
     }
 
-    .role-header span:first-child {
-        color: var(--blue);
+    .leaf-mini {
+        width: 50px;
+        height: 100px;
+    }
+    
+    .leaf-mini-1 {
+        top: -114px;
+        left: 20px;
+    }
+    
+    .leaf-mini-2 {
+        top: -114px;
+        right: 50px;
+    }
+
+    .group-mini-1 {
+        top: 10px;
+    }
+    
+    .group-mini-2 {
+        top: 100px;
+    }
+
+    .role-header span:first-child, .in-progress {
+        color: var(--blue); 
         font-size: 2rem; 
         font-weight: 900;
+        font-family: var(--sans-book);
+    }
+
+    .header-title {
+        color: var(--blue);
+    }
+
+    .in-progress {
+        margin-top: -15px;
     }
 
     .role-header span a {
@@ -1224,11 +1291,18 @@ summary .role-header {
         color: var(--blue);
         font-size: 2rem; 
         font-weight: 900;
-        margin-left: -25px;
     }
 
     .details-container {
-        padding: 0 25px;
+        padding: 0 0;
+    }
+
+    .bullet-list > li {
+        font-size: 1rem;
+    }
+
+    .grid-cookbook-section .project-img {
+        filter: blur(5px);
     }
 
 
