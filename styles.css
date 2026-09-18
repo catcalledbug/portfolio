@@ -150,7 +150,7 @@ span#letter-spacing-flair {
     width: 100%;
     object-fit: cover;
     min-height: 200px;
-    outline: 1px solid var(--dark-gray);
+    border: 1px solid var(--dark-gray);
     box-shadow: 4px 10px 12px -4px black;
     z-index: 9;
 }
@@ -346,7 +346,7 @@ nav {
 }
 
 .intro-outline {
-    outline: 1px black solid;
+    border: 1px black solid;
     padding: 25px;
     justify-self: center;
 }
@@ -356,7 +356,11 @@ nav {
     position: relative;
     z-index: 3;
     width: 100%;
-    max-width: 400px;
+}
+
+#experience .exp-container .work-section {
+    border-bottom: 1px solid black;
+    padding: 10px 0;
 }
 
 span.header-name,
@@ -548,7 +552,7 @@ summary > .role-header > span a {
 
 details {
 	scroll-margin-top: 50px;
-    outline: 1px black solid;
+    border: 1px black solid;
     margin-bottom: 10px;
 }
 
@@ -563,7 +567,7 @@ summary {
     justify-content: space-between;
     padding: 10px 10px;
     padding-right: 25px;
-    outline: 1px black solid;
+    border: 1px black solid;
     align-items: center;
     background-color: var(--white);
 }
@@ -653,7 +657,7 @@ h3.role-header span {
 }
 
 .contact-outline {
-    outline: none;
+    border: none;
 }
 
 .nav-item:hover .animation-box {
@@ -724,7 +728,7 @@ figure>img {
 .work-section:has(.contact-socials) {
     height: 100%;
     margin-bottom: 10px;
-    outline: 1px solid black;
+    border: 1px solid black;
 }
 
 .contact-socials {
@@ -791,7 +795,7 @@ figure>img {
     width: 200px;
     padding-bottom: 5px;
     background-color: var(--white);
-    outline: 1px solid black;
+    border: 1px solid black;
     box-shadow: 2px 2px 7px black;
     bottom: 0;
     height: 80px;
@@ -993,29 +997,42 @@ summary .role-header {
     }
 
 /* Testing Grid Large Layout */
+    body {
+        padding: 0 50px;
+    }
 
     .lg-grid {
         display: grid;
-        grid-template-columns: 1fr 150px 1fr;
-        grid-template-rows: repeat(7, auto);
+        grid-template-columns: 1fr 200px 1fr;
+        grid-template-rows: repeat(5, auto);
         width: 100%;
         place-items: center;
         gap: 50px;
         overflow: hidden;
         align-items: start;
+        position: relative;
+        /* margin-left: -25px; */
+        /* margin-right: -25px; */
     }
 
     .lg-grid section > section {
-        width: 450px;
-        outline: 1px solid black;
-        padding: 25px;
-        background-color: var(--white);
+        /* width: 450px; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid black; */
+        /* padding: 25px; */
+        /* background-color: var(--white); */
     }
 
     .intro-outline {
         min-height: 600px;
-        max-width: 450px;
-        background-color: var(--white);
+        /* max-width: 500px; */
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        /* background-color: var(--white); */
     }
 
     #small-view-layout {
@@ -1023,29 +1040,29 @@ summary .role-header {
     }
 
     .headshot-image {
-        max-width: 300px;
-        height: 300px;
+        max-width: 250px;
+        height: 250px;
         border-bottom-right-radius: 200px;
         border-bottom-left-radius: 200px;
-        justify-self: center;
     }
 
     .headshot-img-grid {
         grid-column: 2 / 3;
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
         z-index: 20;
         height: 100%;
         min-width: 300px;
+        text-align: center;
     }
 
     .grid-about-section {
         grid-column: 1 / 2;
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
     }
 
     .grid-work-section {
         grid-column: 3 / 4;
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
     }
 
     .exp-container .work-section {
@@ -1053,50 +1070,66 @@ summary .role-header {
         padding: 10px 0;
     }
 
+    .exp-container {
+        background-color: transparent;
+    }
+
     .grid-projects-section {
-        grid-column: 2 / 3;
-        grid-row: 3 / 4;
+        /* grid-column: 2 / 3;
+        grid-row: 3 / 4; */
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
         z-index: 4;
     }
 
     .lg-grid #projects > section {
-        height: 100px;
-        min-height: 100px;
-        width: 300px;
+        width: 100%;
+        padding: 0;
     }
    
     .lg-grid #projects .header-title {
-        text-align: center;
+        /* padding-left: 25px; */
     }
 
     .grid-tt-section {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
+        /* grid-column: 1 / 2; */
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
     }
 
     .grid-gac-section {
         grid-column: 3 / 4;
-        grid-row: 3 / 4;
+        grid-row: 2 / 3;
     }
 
     .grid-bb-section {
         grid-column: 1 / 2;
-        grid-row: 4 / 5;
+        grid-row: 3 / 4;
     }
 
     .grid-cookbook-section {
         grid-column: 3 / 4;
-        grid-row: 4 / 5;
+        grid-row: 3 / 4;
     }
 
     .grid-contact-section {
-        grid-column: 2 / 3;
-        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
         z-index: 7;
+    }
+    /* ^= starts with $= ends with */
+    /* [class^="grid-"][class$="-section"] {} */
+    .grid-tt-section,
+    .grid-bb-section,
+    .grid-gac-section,
+    .grid-cookbook-section {
+        border: 1px solid black;
+        border-style: dashed;
+        padding: 25px;
     }
 
     .stem-grid-1 {
-        grid-row: 2 / 6;
+        grid-row: 1 / 5;
         grid-column: 2 / 3;
         height: 100%;
         margin-top: 100px;
@@ -1105,7 +1138,7 @@ summary .role-header {
 
     .grid-to-top {
         grid-column: 1 / 4;
-        grid-row: 7 / 8;
+        grid-row: 5 / 6;
         width: 100%;
         height: 150px;
         place-content: end;
@@ -1128,14 +1161,13 @@ summary .role-header {
     .lg-grid .stem-extended {
         height: 100%;
         z-index: 1;
-        width: 50px;
+        width: 30px;
         position: relative;
         border-top: none;
         border-bottom: none;
         margin-top: 50px;
         z-index: 7;
     }
-
 
     #projects a,  
     .role-header.lg-text span a,
@@ -1144,8 +1176,13 @@ summary .role-header {
     }
 
     #projects {
-        align-self: start;
+        align-self: end;
         z-index: 8;
+        width: 100%;
+        /* align-items: end; */
+        /* align-content: end; */
+        top: 574px;
+        position: absolute;
     }
 
     #projects a:hover,  
@@ -1162,7 +1199,7 @@ summary .role-header {
     }
 
     .leaf {
-        width: 131px;
+        width: 115px;
         height: 270px;
         background-color: var(--green);
         /* clip-path: polygon(50% 0%, 75% 25%, 80% 60%, 60% 100%, 40% 100%, 20% 60%, 25% 25%); */
@@ -1174,7 +1211,7 @@ summary .role-header {
     /* box-shadow: 2px 3px 6px 1px #2f3517; */
 
     .leaf-container-1 {
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
     }
 
     .leaf-container-2 {
@@ -1183,48 +1220,48 @@ summary .role-header {
 
     .leaf-1 {
         rotate: 70deg;
-        margin-left: 78px;
+        margin-left: 73px;
         top: 25px;
     }
 
     .leaf-2 {
         rotate: -70deg;
-        margin-left: -204px;
-        top: -224px;
+        margin-left: -189px;
+        top: -147px;
     }
 
     .leaf-3 {
         rotate: 70deg;
-        margin-left: 78px;
-        top: -224px;
+        margin-left: 73px;
+        top: -147px;
     }
 
     .leaf-4 {
-        margin-left: -204px;
+        margin-left: -189px;
         rotate: -70deg;
-        top: 860px;
+        top: 95px;
     }
    
     .leaf-5 {
-        margin-left: 78px;
+        margin-left: 73px;
         rotate: 70deg;
-        top: 860px;
+        top: 95px;
     }
 
     .leaf-6 {
-        margin-left: -204px;
+        margin-left: -189px;
         rotate: -70deg;
         top: 25px;
     }
 
     .leaf-7 {
-        margin-left: 78px;
+        margin-left: 73px;
         rotate: 70deg;
         top: 358px;
     }
 
     .leaf-8 {
-        margin-left: -204px;
+        margin-left: -189px;
         rotate: -70deg;
         top: 358px;
     }
@@ -1262,7 +1299,7 @@ summary .role-header {
     }
 
     .role-header span:first-child, .in-progress {
-        color: var(--blue); 
+        /* color: var(--blue);  */
         font-size: 2rem; 
         font-weight: 900;
         font-family: var(--sans-book);
@@ -1270,6 +1307,8 @@ summary .role-header {
 
     .header-title {
         color: var(--blue);
+        font-weight: 900;
+        font-size: 3.3rem;
     }
 
     .in-progress {
@@ -1288,7 +1327,7 @@ summary .role-header {
     }
 
     .role-header.stack {
-        color: var(--blue);
+        /* color: var(--blue); */
         font-size: 2rem; 
         font-weight: 900;
     }
@@ -1301,10 +1340,27 @@ summary .role-header {
         font-size: 1rem;
     }
 
-    .grid-cookbook-section .project-img {
-        filter: blur(5px);
+    .grid-cookbook-section .project-img,
+    .grid-cookbook-section ul.bullet-list {
+        filter: blur(4px);
     }
 
+    .figure-container {
+        justify-self: end;
+    }
+
+    .lg-grid .intro-outline.project-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .details-container {
+        width: 40%;
+    }
+   
+    .figure-container {
+        width: 60%;
+    }
 
     /*  */
 
