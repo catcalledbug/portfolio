@@ -43,6 +43,7 @@
 	--green: #778E28;
 	/* --dark-gray: #3D3C31; */
 	--dark-gray: #000000;
+    --background-transparent: #c3c0b6b0;
 	--background-gray: #C3C0B6;
 	--yellow: #e7aa2c;
 	--white: #fbefdf;
@@ -94,50 +95,20 @@ main {
 .header-title {
 	font-family: var(--serif-light);
     font-size: 2.5rem;
-    /* text-align: center; */
     display: block;
-    /* color: var(--blue); */
-	/* padding-top: 100px;
-	padding-bottom: 0;
-    text-align: center; */
 }
 
 .spacer {
-    height: 50px;
+    height: 100px;
+    width: 100%;
+    /* background-color: var(--background-transparent); */
+    z-index: 8;
+    position: relative;
 }
 
 .lg-grid {
     display: none;
 }
-
-/* .deco-grid.xsm {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    place-items: center;
-    place-content: center;
-} */
-
-/* .deco-1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-.deco-2 {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-.deco-3 {
-    grid-column: 7 / 8;
-    grid-row: 1 / 2;
-}
-.deco-4 {
-    grid-column: 7 / 8;
-    grid-row: 2 / 3;
-}
-
-.deco-grid .icon {
-    font-size: 2.5rem;
-} */
 
 span#letter-spacing-flair {
     letter-spacing: -5px;
@@ -172,6 +143,7 @@ span#letter-spacing-flair {
     flex-direction: column;
     align-items: center;
     position: relative;
+    width: 100%;
 }
 
 .space-between {
@@ -302,25 +274,25 @@ li {
 .white-btn {
 	background-color: var(--white);
     color: black !important;
-    box-shadow: 4px 10px 12px -4px #828283;
+    /* box-shadow: 4px 10px 12px -4px #828283; */
 }
 
 .purple-btn {
     background-color: var(--purple);
     color: black !important;
-    box-shadow: 4px 10px 12px -4px rgb(117, 90, 151);
+    /* box-shadow: 4px 10px 12px -4px rgb(117, 90, 151); */
 }
 
 .blue-btn {
 	background-color: var(--blue);
 	color: white !important;
-	box-shadow: 4px 10px 12px -4px #202a62;
+	/* box-shadow: 4px 10px 12px -4px #202a62; */
 }
 
 .red-btn {
 	background-color: var(--red);
 	color: white !important;
-	box-shadow: 4px 10px 12px -4px #681d22;
+	/* box-shadow: 4px 10px 12px -4px #681d22; */
 }
 
 .green-btn {
@@ -330,8 +302,11 @@ li {
 
 .yellow-btn {
 	background-color: var(--yellow);
-	box-shadow: 4px 10px 12px -4px #a1771e;
 	color: black !important;
+}
+
+.yellow-btn, .blue-btn, .red-btn, .purple-btn, .white-btn {
+    box-shadow: 2px 3px 8px .5px #1d200e;
 }
 
 ul {
@@ -346,14 +321,11 @@ nav {
 }
 
 .intro-outline {
-    border: 1px black solid;
-    padding: 25px;
+    padding: 1em;
     justify-self: center;
-}
-
-.intro-outline, .exp-container {
     background-color: var(--background-gray);
     position: relative;
+    border: 1px solid black;
     z-index: 3;
     width: 100%;
 }
@@ -441,7 +413,7 @@ span.header-name,
 }
 
 #contact .tulips {
-    padding: 25px 0;
+    padding: 1.5em 0;
 }
 
 .sans {
@@ -471,7 +443,7 @@ summary > .role-header > span a {
 }
 
 #about p {
-	line-height: 1.2;
+	line-height: 1.5;
 }
 
 #intro {
@@ -498,16 +470,12 @@ summary > .role-header > span a {
 }
 
 #intro p {
-	font-size: .8rem;
+	font-size: .95rem;
 }
 
 .role-header {
     font-size: 1.2rem;
     color: black;
-}
-
-.details-container {
-    padding: 0 25px;
 }
 
 .bullet-list {
@@ -520,8 +488,7 @@ summary > .role-header > span a {
 .stack>p {
 	line-height: 1.2;
 	list-style: disc;
-	padding: 5px 0;
-    font-size: .8rem;
+	padding: .5em 0;
     color: black;
 }
 
@@ -546,14 +513,20 @@ summary > .role-header > span a {
     font-family: var(--sans-med);
 }
 
-.work-section {
-	background-color: transparent;
-}
-
 details {
 	scroll-margin-top: 50px;
-    border: 1px black solid;
+    /* border: 1px black solid; */
     margin-bottom: 10px;
+}
+
+details:not(:open), #experience .flex-wrapper {
+    height: 63px;
+}
+
+.work-section details[open] {
+    background-color: var(--white);
+    padding: 1em;
+    border: 1px solid black;
 }
 
 summary {
@@ -565,11 +538,10 @@ summary {
 	gap: 5px;
 	width: 100%;
     justify-content: space-between;
-    padding: 10px 10px;
-    padding-right: 25px;
     border: 1px black solid;
+    height: 63px;
+    padding: 0 .5em;
     align-items: center;
-    background-color: var(--white);
 }
 
 summary::after {
@@ -579,11 +551,23 @@ summary::after {
 	transition: transform 0.5s ease;
 	transform-origin: 50% 50%;
 	font-size: 2.7rem;
+    padding-bottom: 1em
 }
 
 summary[open],
 summary::after {
 	transform: rotate(270deg);
+}
+
+details[open] summary {
+    border: none;
+    padding: 0;
+}
+
+details[open] summary h3 span, .role-header.stack {
+    font-family: var(--sans-book);
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 details[open] summary::after {
@@ -644,10 +628,28 @@ h3.role-header span {
     z-index: 2;
 }
 
+.info-container {
+    padding: 1em 0;
+}
+
+.page-stem {
+    height: 100%;
+    bottom: 1px;
+    left: calc(50% - 20px);
+    position: absolute;
+}
+
+#small-view-layout {
+    height: fit-content;
+    position: relative;
+}
+
+
+
 .stem, .stem-extended {
 	background-color: var(--green);
 	z-index: 1;
-    box-shadow: 2px 3px 8px 1px #2f3517;
+    box-shadow: 2px 3px 5px 1px #2f3517;
 }
 
 .stem {
@@ -686,6 +688,10 @@ figure>img {
     position: relative;
     z-index: 6;
 }
+
+/* #contact span {
+    padding: 0 .5em;
+} */
 
 #contact .nav-item img {
 	border-bottom-right-radius: 25px;
@@ -733,14 +739,15 @@ figure>img {
 
 .contact-socials {
     width: 100%;
-    height: 100%;
+    height: 63px;
+    padding: 0 .5em;
 }
 
 .contact-socials .open-arrow {
     font-size: 2rem;
-    padding-right: 15px;
+    padding-right: 0.5em;
     width: unset;
-}
+} 
 
 .contact-socials:hover a,
 .contact-socials:hover .open-arrow
@@ -754,17 +761,15 @@ figure>img {
 }
 
 #contact .role-header-exp span a {
-    padding: 25px;
     display: block;
 }
 
-#contact .role-header-exp, 
+/* #contact .role-header-exp, 
 #contact .role-header-exp span,
 #contact .role-header-exp span a {
     width: 100%;
     height: 100%;
     /* display: block; */
-}
 
 #contact .list-item:nth-child(odd) {
 	margin-top: 50px !important;
@@ -825,7 +830,7 @@ figure>img {
     justify-self: center;
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 80px;
     justify-content: center;
     border-bottom: 1px solid black;
 }
@@ -885,16 +890,16 @@ summary .role-header {
     height: 50px;
 }
 
-#about .stem, .stem-extended{
-    width: 35px;
-    border-bottom: 1px solid black;
-    overflow: hidden;
+#about .stem, .stem-extended {
+    width: 40px;
+    /* border-bottom: 1px solid black; */
+    /* overflow: hidden; */
 }
 
 .stem-extended, #contact-stem-extended {
-    height: 110px;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    /* height: 100vh; */
+    /* border-bottom: 1px solid black; */
+    /* border-top: 1px solid black; */
 }
 
 #contact-stem-extended, #contact-stem-inner-extended {
@@ -903,6 +908,24 @@ summary .role-header {
 
 .header-name {
     font-size: 2.5rem;
+}
+
+.bottom-underline {
+    border-bottom: 1px solid black;
+    /* padding-bottom: .5em; */
+}
+
+.roles-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* h3.role-header span:first-child {
+    font-size: 1.2rem;
+} */
+
+#title {
+    padding: 0 1em;
 }
 
 @media (min-width: 600px) {
@@ -1030,7 +1053,8 @@ summary .role-header {
         min-height: 600px;
         /* max-width: 500px; */
         border: none;
-        background-color: transparent;
+        /* background-color: transparent; */
+        /* background-color: #c3c0b6b0; */
         padding: 0;
         /* background-color: var(--white); */
     }
@@ -1125,7 +1149,7 @@ summary .role-header {
     .grid-cookbook-section {
         border: 1px solid black;
         border-style: dashed;
-        padding: 25px;
+        padding: 1.5em;
     }
 
     .stem-grid-1 {
@@ -1221,7 +1245,7 @@ summary .role-header {
     .leaf-1 {
         rotate: 70deg;
         margin-left: 73px;
-        top: 25px;
+        top: 1.5em;
     }
 
     .leaf-2 {
@@ -1251,7 +1275,7 @@ summary .role-header {
     .leaf-6 {
         margin-left: -189px;
         rotate: -70deg;
-        top: 25px;
+        top: 1.5em;
     }
 
     .leaf-7 {
@@ -1353,10 +1377,6 @@ summary .role-header {
         display: flex;
         flex-direction: row;
     }
-
-    .details-container {
-        width: 40%;
-    }
    
     .figure-container {
         width: 60%;
@@ -1368,7 +1388,7 @@ summary .role-header {
 
 @media (min-width: 1450px) {
     body {
-        padding: 0 25px;
+        padding: 0 1.5em;
     }
     
     #heading-title span {
