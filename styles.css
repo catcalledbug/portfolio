@@ -321,7 +321,7 @@ nav {
 }
 
 .intro-outline {
-    padding: 1em;
+    padding: 1.5em;
     justify-self: center;
     background-color: var(--background-gray);
     position: relative;
@@ -425,16 +425,11 @@ p {
 	font-family: var(--sans-book);
 }
 
-#projects a {
-	border-bottom: solid 1px var(--dark-gray) !important;
-}
-
 summary > .role-header > span a { 
     color: #000000;
 }
 
-#about a::after,
-#projects a::after {
+#about a::after {
 	content: " ↗";
 }
 
@@ -484,8 +479,8 @@ summary > .role-header > span a {
 }
 
 
-.bullet-list>li,
-.stack>p {
+.bullet-list > li,
+.stack > p {
 	line-height: 1.2;
 	list-style: disc;
 	padding: .5em 0;
@@ -516,11 +511,11 @@ summary > .role-header > span a {
 details {
 	scroll-margin-top: 50px;
     /* border: 1px black solid; */
-    margin-bottom: 10px;
 }
 
-details:not(:open), #experience .flex-wrapper {
-    height: 63px;
+details:not(:open), 
+#experience .flex-wrapper {
+    min-height: 63px;
 }
 
 .work-section details[open] {
@@ -564,7 +559,7 @@ details[open] summary {
     padding: 0;
 }
 
-details[open] summary h3 span, .role-header.stack {
+details[open] summary h3 span, .role-header {
     font-family: var(--sans-book);
     font-size: 2rem;
     font-weight: 400;
@@ -576,6 +571,7 @@ details[open] summary::after {
 	transform: rotate(360deg);
 	font-weight: 900;
 	font-family: sans-serif;
+    color: var(--red);
 }
 
 details[open] #uw::after {
@@ -599,14 +595,8 @@ h3.role-header span {
 	display: block;
 }
 
-.stack>span {
-	width: fit-content;
-	border-bottom: 1px solid black;
-}
-
 ::selection,
-#about a:hover,
-#projects a:hover {
+#about a:hover {
 	background-color: var(--selection-red);
 	color: #fff !important;
 }
@@ -629,7 +619,9 @@ h3.role-header span {
 }
 
 .info-container {
-    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
 }
 
 .page-stem {
@@ -715,10 +707,6 @@ figure>img {
     rotate: 40deg;
 }
 
-#intro .bullet-list>li, #intro .stack>p {
-    font-size: .9rem;
-}
-
 .tulips {
 	display: flex;
 	flex-direction: column;
@@ -750,14 +738,17 @@ figure>img {
 } 
 
 .contact-socials:hover a,
-.contact-socials:hover .open-arrow
+.contact-socials:hover .open-arrow,
+summary:hover
  {
     color: blue;
     cursor: pointer;
 }
 
-.contact-socials:hover {
+.contact-socials:hover, 
+summary:hover {
     background-color: var(--white);
+    cursor: pointer;
 }
 
 #contact .role-header-exp span a {
@@ -920,13 +911,57 @@ summary .role-header {
     flex-direction: column;
 }
 
-/* h3.role-header span:first-child {
-    font-size: 1.2rem;
-} */
-
-#title {
-    padding: 0 1em;
+.open-link-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    width: 100%;
+    justify-content: space-between;
 }
+
+.open-link-buttons button a {
+    border-bottom: none;
+    font-family: var(--sans-book);
+    font-size: .8rem;
+    color: white;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.open-link-buttons > button {
+    padding: 1em 1.5em;
+    border-radius: 25px;
+    border: 1px solid black;
+    height: 45px;
+    background-color: var(--selection-red);
+    width: 50%;
+}
+
+.open-link-buttons > button:hover {
+    background-color: var(--background-gray);
+    cursor: pointer;
+    color: black;
+}
+
+.open-link-buttons > button:hover a {
+    color: black;
+    cursor: pointer;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 1em;
+}
+
+/* #title {
+    padding: 0 1em;
+} */
 
 @media (min-width: 600px) {
     #heading-title span {
@@ -1193,8 +1228,8 @@ summary .role-header {
         z-index: 7;
     }
 
-    #projects a,  
-    .role-header.lg-text span a,
+    /* #projects a,   */
+    .role-header span a,
     .bullet-list li a {
         border-bottom: 1px solid black;
     }
@@ -1209,15 +1244,15 @@ summary .role-header {
         position: absolute;
     }
 
-    #projects a:hover,  
+    /* #projects a:hover,  
     .role-header.lg-text span a:hover,
     .bullet-list li a:hover {
         background-color: var(--selection-red);
         color: #fff !important;
-    }
+    } */
 
-    #projects a::after,
-    .role-header.lg-text span a::after,
+    /* #projects a::after, */
+    .role-header span a::after,
     .bullet-list li a::after {
 	    content: " ↗";
     }
@@ -1350,11 +1385,10 @@ summary .role-header {
         padding-bottom: 15px;
     }
 
-    .role-header.stack {
-        /* color: var(--blue); */
+    /* .role-header.stack {
         font-size: 2rem; 
         font-weight: 900;
-    }
+    } */
 
     .details-container {
         padding: 0 0;
