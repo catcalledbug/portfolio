@@ -268,7 +268,7 @@ li {
 }
 
 #about {
-    scroll-margin-top: 150px;
+    scroll-margin-top: 1.5em;
 }
 
 .white-btn {
@@ -694,7 +694,7 @@ figure>img {
 }
 
 #experience, #projects {
-    scroll-margin-top: 50px;
+    scroll-margin-top: 1.5em;
 }
 
 .icon {
