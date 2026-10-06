@@ -71,6 +71,7 @@ body {
 	overflow-x: hidden;
 	height: 100%;
     text-wrap: pretty;
+    padding-bottom: 1em;
 }
 
 h1,
@@ -92,13 +93,6 @@ a:visited {
 	font-weight: 400;
 	color: var(--dark-gray);
 	padding-top: 50px;
-}
-
-.header-name,
-.list-item a {
-	font-size: 2.2rem;
-	line-height: .9;
-	font-family: var(--serif-light);
 }
 
 .header-title {
@@ -136,7 +130,7 @@ a:visited {
 }
 
 .flair-letter {
-	font-family: var(--serif-light-italic) !important;
+	font-family: var(--serif-light-italic);
 	padding: 0;
 	margin: 0;
 }
@@ -180,6 +174,10 @@ figure {
 	padding-bottom: 10px;
     justify-content: center;
     height: 100%;
+
+    & img {
+	    padding: 10px;
+    }
 }
 
 .mini-text {
@@ -248,20 +246,28 @@ li {
     justify-content: center;
     align-items: center;
     width: 100%;
-}
 
-.list-item p {
-	font-size: 1.2rem;
-	font-family: var(--serif-light);
-	margin: 0;
-	padding-bottom: 15px;
-}
+    & .list-item:nth-child(odd) {
+        margin-top: 50px;
+    }
+
+    & .list-item:nth-child(even) .stem {
+        height: calc(120px + 50px);
+    }
+}   
 
 .list-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
     width: 75px;
+
+    & p {
+        font-size: 1.2rem;
+        font-family: var(--serif-light);
+        margin: 0;
+        padding-bottom: 15px;
+    }
 
     & .purple-btn {
         background-color: var(--purple);
@@ -287,7 +293,19 @@ li {
         background-color: var(--yellow);
         color: black;
     }
-    
+
+    & a {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100px;
+        font-weight: 800;
+        overflow: hidden;
+        line-height: .9;
+
+        & p {
+            font-family: var(--serif-light-italic);
+        }
+    }
 }
 
 #about {
@@ -319,26 +337,12 @@ nav {
     width: 100%;
 }
 
-#experience .exp-container .work-section {
-    border-bottom: 1px solid black;
-    padding: 10px 0;
-}
-
-.list-item a, #contact .list-item a {
-	font-size: 1.2rem;
-	text-align: center;
-    width: 100px;
-    font-weight: 800;
-    overflow: hidden;
-}
-
-#contact .list-item a, #contact .list-item:hover .animation-box {
-    width: 130px;
-}
-
-#contact .list-item {
-    width: 100px;
-}
+#experience {
+    & .exp-container .work-section {
+        border-bottom: 1px solid black;
+        padding: 10px 0;
+    }
+} 
 
 .leaf-mini {
     width: 25px;
@@ -381,17 +385,8 @@ nav {
     padding: 1.5em 0;
 }
 
-.sans {
-	font-family: var(--sans-book) !important;
-	font-weight: 600 !important;
-}
-
 p {
 	font-family: var(--sans-book);
-}
-
-summary > .role-header > span a { 
-    color: #000000;
 }
 
 #contact .nav-item p::after {
@@ -432,7 +427,6 @@ summary > .role-header > span a {
     padding-left: 1em;
 }
 
-
 .bullet-list > li,
 .stack > p {
 	line-height: 1.2;
@@ -441,20 +435,21 @@ summary > .role-header > span a {
     color: black;
 }
 
-.about-me-text .bullet-list>li {
-    list-style: none;
-}
+.about-me-text {
+    & .bullet-list {
+        padding-left: 0;
 
-.about-me-text .bullet-list {
-    padding-left: 0;
-}
+        & li {
+            list-style: none;
+        }
+    }
 
-.bullet-list>li>a {
-	color: black;
-}
-
-.bullet-list>li>b {
-	font-weight: 900 !important;
+    & p {
+        & span {
+            font-weight: 800;
+            font-family: var(--sans-med);
+        }
+    }
 }
 
 #intro .specializations {
@@ -471,10 +466,18 @@ details:not(:open),
     min-height: 63px;
 }
 
-.work-section details[open] {
-    background-color: var(--white);
-    padding: 1em;
-    border: 1px solid black;
+.work-section {
+
+    & details[open] {
+        background-color: var(--white);
+        padding: 1em;
+        border: 1px solid black;
+    }
+    &:has(.contact-socials) {
+        height: 100%;
+        margin-bottom: 10px;
+        border: 1px solid black;
+    }
 }
 
 summary {
@@ -490,71 +493,81 @@ summary {
     height: 63px;
     padding: 0 .5em;
     align-items: center;
+
+    &::after {
+        content: "‹";
+        display: block;
+        transform: rotate(270deg);
+        transition: transform 0.5s ease;
+        transform-origin: 50% 50%;
+        font-size: 3rem;
+        padding-bottom: 1em
+    }
+
+    &:hover,
+    &:active {
+        color: var(--red);
+    }
+
+    & .role-header {
+        font-size: 1rem;
+        
+        & span a { 
+            color: #000000;
+        }
+    }
+
+    &::details-content {
+        transition: all 0.5s ease;
+        height: 0;
+        overflow: clip;
+    }
+
+    &:hover {
+        color: blue;
+        background-color: white;
+        cursor: pointer;
+    }
 }
 
-summary::after {
-	content: "‹";
-	display: block;
-	transform: rotate(90deg);
-	transition: transform 0.5s ease;
-	transform-origin: 50% 50%;
-	font-size: 2.7rem;
-    padding-bottom: 1em
-}
+details[open] {
+    & summary {
+        border: none;
+        padding: 0;
+        background-color: var(--white);
 
-summary[open],
-summary::after {
-	transform: rotate(270deg);
-}
+        & h3 {
+            & span {
+                font-family: var(--sans-book);
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
 
-details[open] summary {
-    border: none;
-    padding: 0;
-}
+        &::after {
+            content: "✕";
+            font-size: 1.8rem;
+            transform: rotate(360deg);
+            font-weight: 900;
+            font-family: sans-serif;
+            color: var(--red);
+        }
+    }
 
-details[open] summary h3 span, .role-header {
-    font-family: var(--sans-book);
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-details[open] summary::after {
-	content: "✕";
-	font-size: 1.8rem;
-	transform: rotate(360deg);
-	font-weight: 900;
-	font-family: sans-serif;
-    color: var(--red);
-}
-
-details[open] #uw::after {
-	content: url(/assets/imgs/uw-crest.svg);
-	width: 35px;
-	transform: rotate(360deg);
-}
-
-summary:hover,
-summary:active {
-	color: var(--red);
-}
-
-summary::details-content {
-	transition: all 0.5s ease;
-	height: 0;
-	overflow: clip;
-}
-
-h3.role-header span {
-	display: block;
+    & #uw::after {
+        content: url(/assets/imgs/uw-crest.svg);
+        width: 35px;
+        transform: rotate(360deg);  
+    }
 }
 
 ::selection {
 	background-color: var(--selection-red);
-	color: #fff !important;
+	color: #fff;
 }
 
 .animation-box {
-	background-color: var(--selection-red) !important;
+	background-color: var(--selection-red);
 	color: black;
 	z-index: 5;
 	position: absolute;
@@ -578,7 +591,7 @@ h3.role-header span {
 
 .page-stem {
     height: 98%;
-    bottom: 1px;
+    bottom: 15px;
     left: calc(50% - 20px);
     position: absolute;
     width: 40px;
@@ -588,7 +601,9 @@ h3.role-header span {
     height: fit-content;
     position: relative;
 }
-.stem, .stem-extended {
+
+.stem, 
+.stem-extended {
 	background-color: var(--green);
 	z-index: 1;
     box-shadow: 2px 3px 5px 1px #2f3517;
@@ -614,36 +629,21 @@ h3.role-header span {
     max-width: 250px;
 }
 
-figure>img {
-	padding: 10px;
-}
-
-#contact .nav-item {
-	height: 20vh;
-    max-height: 120px;
-    max-width: 185px;
-}
-
 #contact {
 	display: flex;
 	flex-direction: column;
     position: relative;
     z-index: 6;
+
+    & .nav-item {
+        height: 20vh;
+        max-height: 120px;
+        max-width: 185px;
+    }
 }
 
-/* #contact span {
-    padding: 0 .5em;
-} */
-
-#contact .nav-item img {
-	border-bottom-right-radius: 25px;
-}
-
+#experience, 
 #projects {
-	scroll-margin-top: 0px;
-}
-
-#experience, #projects {
     scroll-margin-top: 1.5em;
 }
 
@@ -665,107 +665,31 @@ figure>img {
     width: 100%;
 }
 
-.blue {
-	color: var(--blue);
-}
-
-.work-section:has(.contact-socials) {
-    height: 100%;
-    margin-bottom: 10px;
-    border: 1px solid black;
-}
-
 .contact-socials {
     width: 100%;
     height: 63px;
     padding: 0 .5em;
-}
 
-.contact-socials .open-arrow {
-    font-size: 2rem;
-    padding-right: 0.5em;
-    width: unset;
+    & .open-arrow {
+        font-size: 2rem;
+        padding-right: 0.5em;
+        width: unset;
+    }
+    
+    &:hover {
+        background-color: var(--white);
+        cursor: pointer;
+    }
+
+    &:hover a,
+    &:hover .open-arrow {
+        color: blue;
+        cursor: pointer;
+    }
 } 
-
-.contact-socials:hover a,
-.contact-socials:hover .open-arrow,
-summary:hover
- {
-    color: blue;
-    cursor: pointer;
-}
-
-.contact-socials:hover, 
-summary:hover {
-    background-color: var(--white);
-    cursor: pointer;
-}
-
-#contact .role-header-exp span a {
-    display: block;
-}
-
-/* #contact .role-header-exp, 
-#contact .role-header-exp span,
-#contact .role-header-exp span a {
-    width: 100%;
-    height: 100%;
-    /* display: block; */
-
-#contact .list-item:nth-child(odd) {
-	margin-top: 50px !important;
-}
-
-.nav-list .list-item:nth-child(odd) {
-    margin-top: 50px !important;
-}
-
-.nav-list .list-item:nth-child(even) .stem {
-    height: calc(120px + 50px);
-}
-
-#contact .list-item:nth-child(even) .stem {
-	height: calc(120px + 50px);
-}
-
-.to-top-container a {
-	color: var(--dark-gray);
-	font-size: 1.7rem;
-	scroll-behavior: smooth;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-    cursor: pointer;
-    z-index: 6;
-    position: absolute;
-    width: 200px;
-    padding-bottom: 5px;
-    background-color: var(--white);
-    border: 1px solid black;
-    box-shadow: 2px 2px 7px black;
-    bottom: 0;
-    height: 80px;
-}
-
-.about-me-text>p span {
-    font-weight: 800;
-    font-family: var(--sans-med);
-}
-
-.to-top-container a>p {
-	font-size: .7rem;
-	margin: 0;
-    color: black;
-}
-
-.to-top-container a:hover,
-.to-top-container a:hover p {
-	color: var(--blue);
-}
 
 .to-top-container {
 	text-align: center;
-	/* margin-top: 90px; */
     display: flex;
     background-color: var(--background-gray);
     justify-self: center;
@@ -774,6 +698,39 @@ summary:hover {
     height: 80px;
     justify-content: center;
     border-bottom: 1px solid black;
+
+    & a {
+        color: var(--dark-gray);
+        font-size: 1.7rem;
+        scroll-behavior: smooth;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 6;
+        position: absolute;
+        width: 50%;
+        padding-bottom: 5px;
+        background-color: var(--white);
+        border: 1px solid black;
+        box-shadow: 3px 0px 7px 0px black;
+        bottom: 0;
+        height: 100%;
+        border-bottom: none;
+
+        & p {
+            font-size: .7rem;
+	        margin: 0;
+            color: black;
+        }
+    }
+    & a:hover {
+        color: var(--blue);
+
+        & p {
+            color: var(--blue);
+        }
+    }
 }
 
 #contact-list-container {
@@ -798,21 +755,10 @@ summary:hover {
     width: 75%;
 }
 
-.animation-text,
-.list-item p {
-	font-family: var(--serif-light-italic) !important;
-}
-
-p.animation-text {
-	font-size: 2.5rem !important;
-}
-
-summary .role-header {
-    font-size: 1rem;
-}
-
-#contact .nav-item {
-    max-height: 100px;
+.animation-box {
+    & .animation-text {
+	    font-size: 2.5rem;
+    }
 }
 
 .headshot-container {
@@ -822,13 +768,13 @@ summary .role-header {
     width: 100%;
 }
 
-#contact-stem-extended, #contact-stem-inner-extended {
+#contact-stem-extended, 
+#contact-stem-inner-extended {
     border-bottom: none;
 }
 
 .bottom-underline {
     border-bottom: 1px solid black;
-    /* padding-bottom: .5em; */
 }
 
 .roles-container {
@@ -842,39 +788,39 @@ summary .role-header {
     gap: 1.5em;
     width: 100%;
     justify-content: space-between;
-}
 
-.open-link-buttons button a {
-    border-bottom: none;
-    font-family: var(--sans-book);
-    font-size: .8rem;
-    color: white;
-    font-weight: 600;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    & button {
+        padding: 1em 1.5em;
+        border-radius: 25px;
+        border: 1px solid black;
+        height: 45px;
+        background-color: var(--selection-red);
+        width: 50%;
 
-.open-link-buttons > button {
-    padding: 1em 1.5em;
-    border-radius: 25px;
-    border: 1px solid black;
-    height: 45px;
-    background-color: var(--selection-red);
-    width: 50%;
-}
+        & a {
+            border-bottom: none;
+            font-family: var(--sans-book);
+            font-size: .8rem;
+            color: white;
+            font-weight: 600;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.open-link-buttons > button:hover {
-    background-color: var(--background-gray);
-    cursor: pointer;
-    color: black;
-}
+        &:hover {
+            background-color: var(--background-gray);
+            cursor: pointer;
+            color: black;
 
-.open-link-buttons > button:hover a {
-    color: black;
-    cursor: pointer;
+            & a {
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 .projects-container {
@@ -903,19 +849,27 @@ summary .role-header {
 
     .list-item {
         width: 100px;
+
+        & a,
+        &:hover .animation-box {
+            width: 125px;
+        }
+
+        & p {
+            font-size: 1.5rem;
+        }
     }
 
-    .list-item a, .list-item:hover .animation-box, .animation-box {
+    .animation-box {
         width: 125px;
     }
 
-    .list-item p {
-        font-size: 1.5rem;
-    }
-   
-    .nav-item, 
-    .nav-item:hover .animation-box {
+    .nav-item {
         height: 110px;
+
+        &:hover .animation-box {
+            height: 110px;
+        }
     }
 
     .stem {
@@ -923,15 +877,18 @@ summary .role-header {
         height: 150px;
     }
 
-    .nav-list .list-item:nth-child(even) .stem {
-        height: calc(150px + 50px);
+    .nav-list {
+        & .list-item:nth-child(even) .stem {
+            height: calc(150px + 50px);
+        }
     }
 
     .mini-text {
         font-size: .7rem;
     }
 
-    .header-name, .list-item a {
+    .header-name, 
+    .list-item a {
         font-size: 3rem;
     }
 
@@ -964,11 +921,14 @@ summary .role-header {
         padding: 60px 0;
     }
     
-    .header-name, .list-item a {
+    .header-name, 
+    .list-item a {
         font-size: 4rem;
     }
 
-    .list-item a, .list-item:hover .animation-box, .animation-box {
+    .list-item a, 
+    .list-item:hover .animation-box, 
+    .animation-box {
         width: 170px;
     }
 
@@ -1015,14 +975,12 @@ summary .role-header {
 
         & .stem-extended {
             height: 100%;
-            z-index: 1;
             width: 40px;
             position: relative;
             border-top: none;
             border-bottom: none;
             margin-top: 50px;
             z-index: 7;
-            // place-self: start;
         }
 
         & .intro-outline {
@@ -1079,7 +1037,6 @@ summary .role-header {
     .grid-projects-section {
         grid-column: 1 / 4;
         grid-row: 2 / 3;
-        z-index: 4;
         align-self: end;
         z-index: 8;
         width: 100%;
@@ -1132,7 +1089,6 @@ summary .role-header {
     .grid-cookbook-section {
         border: 1px solid black;
         padding: 1.5em;
-        // z-index: 7;
         background-color: var(--background-gray);
     }
 
@@ -1142,7 +1098,6 @@ summary .role-header {
         height: 100%;
         margin-top: 100px;
         z-index: 7;
-        // place-self
     }
 
     .grid-to-top {
@@ -1153,20 +1108,6 @@ summary .role-header {
         place-content: end;
         padding-bottom: 15px;
         z-index: 7;
-    }
-
-    .to-top-container {
-        width: 100%;
-        background-color: transparent;
-        height: 100%;
-    }
-
-    .to-top-container {
-        & a {
-            width: 100%;
-            cursor: pointer;
-            height: 100%;
-        }
     }
 
     .role-header span a,
@@ -1320,6 +1261,9 @@ summary .role-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-family: var(--sans-book);
+        font-size: 2rem;
+        font-weight: 400;
 
         & span:first-child {
             font-size: 2rem; 
@@ -1400,10 +1344,10 @@ summary .role-header {
     }
 
     .nav-list {
-        & .list-item:nth-child(even) 
+        & .list-item:nth-child(even) {
             & .stem {
                 height: calc(180px + 50px);
             }
+        }
     }
-   
 }
