@@ -104,7 +104,6 @@ a:visited {
 .spacer {
     height: 100px;
     width: 100%;
-    /* background-color: var(--background-transparent); */
     z-index: 8;
     position: relative;
 }
@@ -158,7 +157,7 @@ a:visited {
 }
 
 #title-spacing {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .text-right {
@@ -395,7 +394,7 @@ p {
 
 #about p, .grid-about-section p, .lg-grid p {
 	line-height: 1.5;
-    font-size: .95rem;
+    font-size: 1rem;
 }
 
 .img-title-container {
@@ -477,6 +476,7 @@ details:not(:open),
         height: 100%;
         margin-bottom: 10px;
         border: 1px solid black;
+        width: 100%;
     }
 }
 
@@ -692,12 +692,10 @@ details[open] {
 	text-align: center;
     display: flex;
     background-color: var(--background-gray);
-    justify-self: center;
     position: relative;
     width: 100%;
-    height: 80px;
-    justify-content: center;
-    border-bottom: 1px solid black;
+    height: 100px;
+    box-shadow: 2px 3px 7px 0px black;
 
     & a {
         color: var(--dark-gray);
@@ -709,11 +707,9 @@ details[open] {
         cursor: pointer;
         z-index: 6;
         position: absolute;
-        width: 50%;
-        padding-bottom: 5px;
+        width: 100%;
         background-color: var(--white);
         border: 1px solid black;
-        box-shadow: 3px 0px 7px 0px black;
         bottom: 0;
         height: 100%;
         border-bottom: none;
@@ -785,12 +781,11 @@ details[open] {
 .open-link-buttons {
     display: flex;
     flex-direction: row;
-    gap: 1.5em;
+    gap: 10px;
     width: 100%;
     justify-content: space-between;
 
     & button {
-        padding: 1em 1.5em;
         border-radius: 25px;
         border: 1px solid black;
         height: 45px;
@@ -808,6 +803,7 @@ details[open] {
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 1em 1.5em;
         }
 
         &:hover {
@@ -913,8 +909,9 @@ details[open] {
     }
 
     .project-img {
-        width: 330px;
-        max-width: 330px;
+        width: 300px;
+        max-width: 300px;
+        margin-top: 0;
     }
 
     .tulips {
@@ -960,18 +957,27 @@ details[open] {
 /* Testing Grid Large Layout */
     body {
         padding: 0 1.5em;
+        padding-bottom: 1.5em;
+    }
+
+    .role-header-exp {
+        font-size: 1.2rem;
     }
 
     .lg-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 300px;
+        grid-template-columns: 1fr 500px 250px;
         grid-template-rows: repeat(5, auto);
         width: 100%;
         place-items: center;
-        gap: 50px;
+        gap: 0em;
         overflow: hidden;
         align-items: start;
         position: relative;
+        /* border: 1px solid black; */
+        border-bottom: 1px solid black;
+        padding: 1.5em;
+        padding-bottom: 0;
 
         & .stem-extended {
             height: 100%;
@@ -979,24 +985,63 @@ details[open] {
             position: relative;
             border-top: none;
             border-bottom: none;
-            margin-top: 50px;
             z-index: 7;
         }
 
         & .intro-outline {
-            min-height: 600px;
             border: none;
             padding: 0;
+            min-height: 300px;
 
             &.project-flex {
                 display: flex;
-                flex-direction: row-reverse;
+                flex-direction: row;
+                gap: 1.5em;
+                padding: 1em 5em;
             }
         }
     }
 
     #small-view-layout {
         display: none;
+    }
+
+    figure {
+        & img {
+	        padding: 0px;
+        }
+    }
+
+    .work-section {
+        &:has(.contact-socials) {
+            width: 50%;
+        }
+    }
+
+   .grid-about-section p, 
+   .lg-grid p {
+        font-size: 1.2rem;
+    }
+
+    .open-link-buttons {
+        gap: 1.5em;
+        justify-content: start;
+
+        & button {
+            width: 40%;
+
+            &:hover {
+                background-color: var(--white);
+            }
+
+            & a {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .role-years {
+        font-size: 1.2rem;
     }
 
     .headshot-image {
@@ -1008,21 +1053,11 @@ details[open] {
 
     .headshot-img-grid {
         grid-column: 3 / 4;
-        grid-row: 1 / 2;
+        grid-row: 1 / 3;
         z-index: 20;
         height: 100%;
         min-width: 300px;
         text-align: center;
-    }
-
-    .grid-about-section {
-        grid-column: 1 / 3;
-        grid-row: 1 / 2;
-    }
-
-    .grid-work-section {
-        grid-column: 1 / 3;
-        grid-row: 2 / 3;
     }
 
     .exp-container {
@@ -1034,66 +1069,86 @@ details[open] {
         }
     }
 
-    .grid-projects-section {
-        grid-column: 1 / 4;
-        grid-row: 2 / 3;
-        align-self: end;
-        z-index: 8;
-        width: 100%;
-        top: 500px;
-        position: absolute;
-
-        & .header-title {
-            font-size: 9.5rem; 
-        }
-
-        & .selected-heading-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
+    .grid-about-header {
+        grid-row: 1 / 2;
     }
 
-    .grid-tt-section {
-        grid-column: 1 / 3;
+    .grid-about-section {
+        grid-row: 2 / 3;
+    }
+
+    .grid-experience-header {
         grid-row: 3 / 4;
     }
 
-    .grid-gac-section {
-        grid-column: 1 / 3;
+     .grid-work-section {
         grid-row: 4 / 5;
     }
 
-    .grid-bb-section {
-        grid-column: 1 / 3;
+     .grid-projects-header {
         grid-row: 5 / 6;
     }
 
-    .grid-cookbook-section {
-        grid-column: 1 / 3;
-        grid-row: 7 / 8;
-    }
-
-    .grid-contact-section {
-        grid-column: 1 / 3;
+    .grid-contact-header {
         grid-row: 9 / 10;
-        z-index: 7;
     }
 
-    /* ^= starts with, $= ends with */
-    /* [class^="grid-"][class$="-section"] {} */
+    .grid-about-header,
+    .grid-projects-header,
+    .grid-experience-header,
+    .grid-contact-header {
+        grid-column: 1 / 3;
+        z-index: 8;
+        width: 100%;
+    }
 
     .grid-tt-section,
     .grid-bb-section,
     .grid-gac-section,
     .grid-cookbook-section {
-        border: 1px solid black;
-        padding: 1.5em;
+        /* border: 1px solid black; */
         background-color: var(--background-gray);
+        grid-column: 1 / 2;
+        min-height: 700px;
     }
 
+    .grid-tt-section {
+        grid-column: 1 / 3;
+        grid-row: 6 / 7;
+    }
+
+    .grid-gac-section {
+        grid-column: 1 / 3;
+        grid-row: 7 / 8;
+    }
+
+    .grid-bb-section {
+        grid-column: 1 / 3;
+        grid-row: 8 / 9;
+    }
+
+    /* .grid-cookbook-section {
+        grid-column: 1 / 3;
+        grid-row: 9 / 10;
+    } */
+
+    .grid-contact-section {
+        grid-column: 1 / 2;
+        grid-row: 10 / 11;
+        z-index: 7;
+        width: 100%;
+        /* border: 1px solid black; */
+
+        & .flex-wrapper-col {
+            align-items: start;
+        }
+    }
+
+    /* ^= starts with, $= ends with */
+    /* [class^="grid-"][class$="-section"] {} */
+
     .stem-grid {
-        grid-row: 1 / 10;
+        grid-row: 1 / 12;
         grid-column: 3 / 4;
         height: 100%;
         margin-top: 100px;
@@ -1102,12 +1157,19 @@ details[open] {
 
     .grid-to-top {
         grid-column: 3 / 4;
-        grid-row: 10 / 11;
+        grid-row: 11 / 12;
         width: 100%;
         height: 150px;
         place-content: end;
-        padding-bottom: 15px;
         z-index: 7;
+    }
+
+    .to-top-container {
+        & a {
+            & p {
+                font-size: 1rem;
+            }
+        }
     }
 
     .role-header span a,
@@ -1279,16 +1341,18 @@ details[open] {
     .header-title {
         color: var(--blue);
         font-weight: 900;
-        font-size: 3.3rem;
+        font-size: 8.5rem; 
+        line-height: 1;
+        padding-top: 1rem;
     }
 
     .details-container {
-        padding: 0 0;
+        padding: 1.5em;
     }
 
     .bullet-list {
         & li {
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
     }
     
