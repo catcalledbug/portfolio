@@ -276,6 +276,7 @@ picture {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        mix-blend-mode: multiply;
     }
 }
 
@@ -743,20 +744,31 @@ details[open] {
     padding: 0 .5em;
 
     & .open-arrow {
-        font-size: 2rem;
         padding-right: 0.5em;
         width: unset;
+        font-size: 2rem;
+    }
+
+    & a {
+        font-size: 1.2rem;
+        /* text-transform: uppercase; */
+        font-weight: 400;
     }
     
     &:hover {
-        background-color: var(--white);
+        background-color: var(--red);
         cursor: pointer;
+        border-radius: 25px;
+        color: white;
     }
 
     &:hover a,
     &:hover .open-arrow {
-        color: var(--blue);
+        color: white;
         cursor: pointer;
+        /* font-size: 2rem; */
+        /* text-transform: uppercase; */
+        /* font-family: var(--serif-light); */
     }
 } 
 
@@ -898,6 +910,10 @@ details[open] {
 }
 
 .link-grid {
+    display: none;
+}
+
+.extra-image {
     display: none;
 }
 
@@ -1043,9 +1059,23 @@ details[open] {
         padding-bottom: 1.5em;
     }
 
-    /* .role-header-exp {
+    .role-header-exp {
         font-size: 1.2rem;
-    } */
+        height: 100%;
+        width: 100%;
+        justify-content: space-around;
+
+        & span {
+            height: 100%;
+            width: 100%;
+            & a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
 
     .lg-grid {
         display: grid;
@@ -1074,9 +1104,12 @@ details[open] {
         & .intro-outline {
             border: none;
             padding: 0;
-            min-height: 300px;
+            min-height: 425px;
             place-self: start;
             max-width: unset;
+            background: var(--white);
+            border-radius: 25px;
+            /* border-top-left-radius: 0; */
 
             &.project-flex {
                 display: flex;
@@ -1110,6 +1143,37 @@ details[open] {
             min-height: 50%;
             height: 50%;
             align-self: center;
+            background-color: var(--yellow);
+            border-radius: 25px;
+
+            &:hover a {
+                color: white;
+            }
+
+            & a {
+                color: black;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                &:hover a {
+                    color: white;
+                }
+            }
+
+            & a .open-arrow {
+
+            }
+        }
+    }
+
+    .grid-contact-section {
+        & .intro-outline {
+            &.project-flex {
+                justify-content: start;
+            }
         }
     }
 
@@ -1139,6 +1203,7 @@ details[open] {
 
     .role-years {
         font-size: 1rem;
+        width: 100px;
     }
 
     .headshot-image {
@@ -1266,6 +1331,10 @@ details[open] {
                 height: 100%;    
                 min-height: fit-content;
             } 
+        }
+
+        & .header-title {
+            margin-left: 20px;
         }
         
         
@@ -1483,6 +1552,10 @@ details[open] {
         width: 250px;
     }
 
+    .extra-image {
+        display: block;
+    }
+
     #title {
         padding: 0 1.5em;
     }
@@ -1567,6 +1640,12 @@ details[open] {
         }
     }
 
+    .work-section {
+        &:has(.contact-socials) {
+            width: 20%;
+        }
+    }
+
     .grid-tt-section,
     .grid-bb-section,
     .grid-gac-section,
@@ -1587,6 +1666,7 @@ details[open] {
         justify-self: center;
         align-self: center;
         gap: 2.5em;
+        padding-right: 15%;
     }
 
     .details-container {
@@ -1616,10 +1696,6 @@ details[open] {
 
     .lg-grid {
         row-gap: 18em;
-    }
-
-    #heading-title span {
-        font-size: 7rem;
     }
 
     .tulips {
@@ -1663,9 +1739,134 @@ details[open] {
     }
 }
 
-@media (min-width: 1700px) {
-    
-}
+@media (min-width: 2000px) {
+    .tulips {
+        padding: 150px 0;
+    }
 
-@media (min-width: 1800px) {
+    .header-name {
+        font-size: 7rem;
+    }
+
+    #heading-title span {
+        font-size: 11.5rem;
+    }
+
+    .header-title {
+        font-size: 7.5rem;
+    }
+
+    .stem {
+        width: 50px;
+    }
+
+    .nav__item {
+        & .nav__link,:hover .animation-box, .animation-box {
+            width: 275px;
+        }
+    }
+
+    .leaf-mini {
+        width: 75px;
+        height: 150px;
+    }
+
+    .leaf-mini-1 {
+        left: 27px;
+    }
+
+    .leaf-mini-2 {
+        right: 77px;
+    }
+
+    .nav__link, .nav__link:hover .animation-box {
+        height: 250px;
+    }
+
+    .nav__item {
+        width: 250px;
+
+        & p {
+            font-size: 2.5rem;
+            
+        }
+    }
+
+    .nav__list {
+        & .nav__item:nth-child(even) {
+            & .stem {
+                height: calc(250px + 50px);
+            }
+        }
+
+        & .nav__item:nth-child(odd) {
+            & .stem {
+                height: 250px;
+            }
+        }
+    }
+
+    .animation-box {
+        & .animation-text {
+            font-size: 3.5rem;
+        }
+    }
+
+    .header-title {
+        margin-bottom: -24px;
+    }
+
+    .headshot-image {
+        margin-top: 11em;
+    }
+
+    .grid-about-section {
+        & .intro-outline {
+            &.project-flex {
+                min-height: 800px;
+            }
+        }
+    }
+
+    .mini-text {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .mini-spacer {
+        height: 125px;
+    }
+
+    .gallery-image {
+        height: 220px;
+    }
+
+    .open-link-buttons {
+        & button {
+            width: 30%;
+
+            & a {
+                font-size: 1.1rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .work-section {
+        &:has(.contact-socials) {
+            height: 65%;
+        }
+    }
+
+    .contact-socials {
+        & .open-arrow {
+            font-size: 2rem;
+        }
+
+        & a {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+    }
 }
