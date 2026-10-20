@@ -1223,7 +1223,7 @@ details[open] {
 
     .role-years {
         font-size: 1rem;
-        width: 100px;
+        width: 110px;
     }
 
     .headshot-image {
@@ -1570,6 +1570,12 @@ details[open] {
 @media (min-width: 1100px) {
     .project-img {
         width: 250px;
+    }
+
+     .gallery-container {
+        & .gallery-image {
+            width: 33%;
+        }
     }
 
     .extra-image {
