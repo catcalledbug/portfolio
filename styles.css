@@ -384,7 +384,7 @@ nav {
 }
 
 .intro-outline {
-    padding: 1.5em;
+    padding: 1em;
     justify-self: center;
     background-color: var(--background-gray);
     position: relative;
@@ -535,6 +535,7 @@ details {
 details:not(:open), 
 #experience .flex-wrapper {
     min-height: 63px;
+    padding: .5em 0;
 }
 
 .work-section {
@@ -755,7 +756,7 @@ details[open] {
 
     & a {
         font-size: 1.2rem;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         font-weight: 400;
     }
     
@@ -917,7 +918,7 @@ details[open] {
 .projects-container {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    /* gap: 1em; */
 }
 
 .mini-spacer {
@@ -1002,6 +1003,10 @@ details[open] {
 @media (min-width: 900px) {
     .link-grid {
         display: flex;
+    }
+
+    .projects-container {
+        gap: 1em;
     }
 
     .link-sm {
@@ -1178,9 +1183,9 @@ details[open] {
                 }
             }
 
-            & a .open-arrow {
+            /* & a .open-arrow {
 
-            }
+            } */
         }
     }
 
