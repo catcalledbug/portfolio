@@ -110,6 +110,11 @@ article {
 	padding-top: 50px;
 }
 
+.role-years {
+    text-align: right;
+    width: 125px;
+}
+
 #extra-border {
     border-top: 1px solid black;
 }
@@ -1228,7 +1233,6 @@ details[open] {
 
     .role-years {
         font-size: 1rem;
-        width: 110px;
     }
 
     .headshot-image {
