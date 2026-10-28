@@ -1062,7 +1062,13 @@ details[open] {
         & .nav__link,:hover .animation-box, .animation-box {
             width: 170px;
         }
-        &:nth-child(even) .stem {
+        /* &:nth-child(even) .stem {
+            height: calc(180px + 50px);
+        } */
+    }
+
+    .nav__list {
+        & .nav__item:nth-child(even) .stem {
             height: calc(180px + 50px);
         }
     }
